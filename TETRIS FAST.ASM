@@ -519,7 +519,7 @@ jump_lbl_4:
 	.byte	TOK_FP_STORE
 @FastBasic_LINE_53:  ; LINE 53
 	.byte	TOK_CALL
-	.word	proc_lbl_S_4000
+	.word	proc_lbl_PUT_RANDOM_SQUARES
 @FastBasic_LINE_54:  ; LINE 54
 jump_lbl_5:
 @FastBasic_LINE_55:  ; LINE 55
@@ -1020,7 +1020,7 @@ jump_lbl_43:
 	.byte	TOK_CJUMP
 	.word	jump_lbl_55
 	.byte	TOK_CALL
-	.word	proc_lbl_S_400
+	.word	proc_lbl_FAST_DROP_PIECE
 jump_lbl_55:
 @FastBasic_LINE_132:  ; LINE 132
 	.byte	TOK_BYTE_SADDR
@@ -1213,7 +1213,7 @@ jump_lbl_70:
 	.byte	TOK_JUMP
 	.word	jump_lbl_3
 @FastBasic_LINE_164:  ; LINE 164
-proc_lbl_S_400:
+proc_lbl_FAST_DROP_PIECE:
 @FastBasic_LINE_165:  ; LINE 165
 	.byte	TOK_BYTE_SADDR
 	.byte	COLOR
@@ -2330,7 +2330,7 @@ jump_lbl_164:
 	.byte	TOK_FP_STORE
 @FastBasic_LINE_329:  ; LINE 329
 	.byte	TOK_JUMP
-	.word	proc_lbl_S_4000
+	.word	proc_lbl_PUT_RANDOM_SQUARES
 @FastBasic_LINE_333:  ; LINE 333
 proc_lbl_S_670:
 @FastBasic_LINE_334:  ; LINE 334
@@ -2869,14 +2869,14 @@ jump_lbl_213:
 	.word	proc_lbl_S_600
 @FastBasic_LINE_396:  ; LINE 396
 jump_lbl_202:
-@FastBasic_LINE_399:  ; LINE 399
+@FastBasic_LINE_397:  ; LINE 397
 	.byte	TOK_VAR_LOAD
 	.byte	37
 	.byte	TOK_PUSH_1
 	.byte	TOK_EQ
 	.byte	TOK_CJUMP
 	.word	jump_lbl_216
-@FastBasic_LINE_400:  ; LINE 400
+@FastBasic_LINE_398:  ; LINE 398
 	.byte	TOK_VAR_SADDR
 	.byte	41
 	.byte	TOK_VAR_ADDR
@@ -2886,7 +2886,7 @@ jump_lbl_202:
 	.byte	$40, $40, $00, $00, $00, $00
 	.byte	TOK_FP_ADD
 	.byte	TOK_FP_STORE
-@FastBasic_LINE_401:  ; LINE 401
+@FastBasic_LINE_399:  ; LINE 399
 	.byte	TOK_VAR_SADDR
 	.byte	17
 	.byte	TOK_PUSH_BYTE
@@ -2900,7 +2900,7 @@ jump_lbl_202:
 	.byte	TOK_CJUMP
 	.word	jump_lbl_217
 jump_lbl_218:
-@FastBasic_LINE_402:  ; LINE 402
+@FastBasic_LINE_400:  ; LINE 400
 	.byte	TOK_VAR_LOAD
 	.byte	17
 	.byte	TOK_PUSH_BYTE
@@ -2910,7 +2910,7 @@ jump_lbl_218:
 	.byte	TOK_FP_INT
 	.byte	TOK_VAR_STORE
 	.byte	18
-@FastBasic_LINE_403:  ; LINE 403
+@FastBasic_LINE_401:  ; LINE 401
 	.byte	TOK_NUM
 	.word	53762
 	.byte	TOK_SADDR
@@ -2941,13 +2941,13 @@ jump_lbl_218:
 	.byte	TOK_BYTE
 	.byte	3
 	.byte	TOK_POKE
-@FastBasic_LINE_404:  ; LINE 404
+@FastBasic_LINE_402:  ; LINE 402
 	.byte	TOK_FOR_NEXT
 	.byte	TOK_CJUMP
 	.word	jump_lbl_218
 jump_lbl_217:
 	.byte	TOK_FOR_EXIT
-@FastBasic_LINE_405:  ; LINE 405
+@FastBasic_LINE_403:  ; LINE 403
 	.byte	TOK_JUMP
 	.word	jump_lbl_219
 jump_lbl_216:
@@ -2958,7 +2958,7 @@ jump_lbl_216:
 	.byte	TOK_EQ
 	.byte	TOK_CJUMP
 	.word	jump_lbl_220
-@FastBasic_LINE_406:  ; LINE 406
+@FastBasic_LINE_404:  ; LINE 404
 	.byte	TOK_VAR_SADDR
 	.byte	41
 	.byte	TOK_VAR_ADDR
@@ -2968,7 +2968,7 @@ jump_lbl_216:
 	.byte	$41, $01, $00, $00, $00, $00
 	.byte	TOK_FP_ADD
 	.byte	TOK_FP_STORE
-@FastBasic_LINE_407:  ; LINE 407
+@FastBasic_LINE_405:  ; LINE 405
 	.byte	TOK_VAR_SADDR
 	.byte	17
 	.byte	TOK_PUSH_BYTE
@@ -2982,7 +2982,7 @@ jump_lbl_216:
 	.byte	TOK_CJUMP
 	.word	jump_lbl_221
 jump_lbl_222:
-@FastBasic_LINE_408:  ; LINE 408
+@FastBasic_LINE_406:  ; LINE 406
 	.byte	TOK_VAR_LOAD
 	.byte	17
 	.byte	TOK_PUSH_BYTE
@@ -2992,7 +2992,7 @@ jump_lbl_222:
 	.byte	TOK_FP_INT
 	.byte	TOK_VAR_STORE
 	.byte	18
-@FastBasic_LINE_409:  ; LINE 409
+@FastBasic_LINE_407:  ; LINE 407
 	.byte	TOK_NUM
 	.word	53762
 	.byte	TOK_SADDR
@@ -3023,13 +3023,13 @@ jump_lbl_222:
 	.byte	TOK_BYTE
 	.byte	3
 	.byte	TOK_POKE
-@FastBasic_LINE_410:  ; LINE 410
+@FastBasic_LINE_408:  ; LINE 408
 	.byte	TOK_FOR_NEXT
 	.byte	TOK_CJUMP
 	.word	jump_lbl_222
 jump_lbl_221:
 	.byte	TOK_FOR_EXIT
-@FastBasic_LINE_411:  ; LINE 411
+@FastBasic_LINE_409:  ; LINE 409
 	.byte	TOK_JUMP
 	.word	jump_lbl_219
 jump_lbl_220:
@@ -3040,7 +3040,7 @@ jump_lbl_220:
 	.byte	TOK_EQ
 	.byte	TOK_CJUMP
 	.word	jump_lbl_224
-@FastBasic_LINE_412:  ; LINE 412
+@FastBasic_LINE_410:  ; LINE 410
 	.byte	TOK_VAR_SADDR
 	.byte	41
 	.byte	TOK_VAR_ADDR
@@ -3050,7 +3050,7 @@ jump_lbl_220:
 	.byte	$41, $03, $00, $00, $00, $00
 	.byte	TOK_FP_ADD
 	.byte	TOK_FP_STORE
-@FastBasic_LINE_413:  ; LINE 413
+@FastBasic_LINE_411:  ; LINE 411
 	.byte	TOK_VAR_SADDR
 	.byte	17
 	.byte	TOK_PUSH_BYTE
@@ -3064,7 +3064,7 @@ jump_lbl_220:
 	.byte	TOK_CJUMP
 	.word	jump_lbl_225
 jump_lbl_226:
-@FastBasic_LINE_414:  ; LINE 414
+@FastBasic_LINE_412:  ; LINE 412
 	.byte	TOK_VAR_LOAD
 	.byte	17
 	.byte	TOK_PUSH_BYTE
@@ -3074,7 +3074,7 @@ jump_lbl_226:
 	.byte	TOK_FP_INT
 	.byte	TOK_VAR_STORE
 	.byte	18
-@FastBasic_LINE_415:  ; LINE 415
+@FastBasic_LINE_413:  ; LINE 413
 	.byte	TOK_NUM
 	.word	53762
 	.byte	TOK_SADDR
@@ -3105,13 +3105,13 @@ jump_lbl_226:
 	.byte	TOK_BYTE
 	.byte	3
 	.byte	TOK_POKE
-@FastBasic_LINE_416:  ; LINE 416
+@FastBasic_LINE_414:  ; LINE 414
 	.byte	TOK_FOR_NEXT
 	.byte	TOK_CJUMP
 	.word	jump_lbl_226
 jump_lbl_225:
 	.byte	TOK_FOR_EXIT
-@FastBasic_LINE_417:  ; LINE 417
+@FastBasic_LINE_415:  ; LINE 415
 	.byte	TOK_JUMP
 	.word	jump_lbl_219
 jump_lbl_224:
@@ -3122,7 +3122,7 @@ jump_lbl_224:
 	.byte	TOK_EQ
 	.byte	TOK_CJUMP
 	.word	jump_lbl_219
-@FastBasic_LINE_418:  ; LINE 418
+@FastBasic_LINE_416:  ; LINE 416
 	.byte	TOK_VAR_SADDR
 	.byte	41
 	.byte	TOK_VAR_ADDR
@@ -3132,7 +3132,7 @@ jump_lbl_224:
 	.byte	$41, $12, $00, $00, $00, $00
 	.byte	TOK_FP_ADD
 	.byte	TOK_FP_STORE
-@FastBasic_LINE_419:  ; LINE 419
+@FastBasic_LINE_417:  ; LINE 417
 	.byte	TOK_VAR_SADDR
 	.byte	17
 	.byte	TOK_PUSH_BYTE
@@ -3146,7 +3146,7 @@ jump_lbl_224:
 	.byte	TOK_CJUMP
 	.word	jump_lbl_229
 jump_lbl_230:
-@FastBasic_LINE_420:  ; LINE 420
+@FastBasic_LINE_418:  ; LINE 418
 	.byte	TOK_VAR_LOAD
 	.byte	17
 	.byte	TOK_PUSH_BYTE
@@ -3156,7 +3156,7 @@ jump_lbl_230:
 	.byte	TOK_FP_INT
 	.byte	TOK_VAR_STORE
 	.byte	18
-@FastBasic_LINE_421:  ; LINE 421
+@FastBasic_LINE_419:  ; LINE 419
 	.byte	TOK_NUM
 	.word	53762
 	.byte	TOK_SADDR
@@ -3184,15 +3184,15 @@ jump_lbl_230:
 	.byte	TOK_BYTE
 	.byte	3
 	.byte	TOK_POKE
-@FastBasic_LINE_422:  ; LINE 422
+@FastBasic_LINE_420:  ; LINE 420
 	.byte	TOK_FOR_NEXT
 	.byte	TOK_CJUMP
 	.word	jump_lbl_230
 jump_lbl_229:
 	.byte	TOK_FOR_EXIT
-@FastBasic_LINE_423:  ; LINE 423
+@FastBasic_LINE_421:  ; LINE 421
 jump_lbl_219:
-@FastBasic_LINE_424:  ; LINE 424
+@FastBasic_LINE_422:  ; LINE 422
 	.byte	TOK_VAR_LOAD
 	.byte	35
 	.byte	TOK_PUSH_VAR_LOAD
@@ -3200,7 +3200,7 @@ jump_lbl_219:
 	.byte	TOK_ADD
 	.byte	TOK_VAR_STORE
 	.byte	35
-@FastBasic_LINE_425:  ; LINE 425
+@FastBasic_LINE_423:  ; LINE 423
 	.byte	TOK_VAR_LOAD
 	.byte	51
 	.byte	TOK_PUSH_BYTE
@@ -3211,12 +3211,12 @@ jump_lbl_219:
 	.byte	TOK_ADD
 	.byte	TOK_VAR_STORE
 	.byte	51
-@FastBasic_LINE_426:  ; LINE 426
+@FastBasic_LINE_424:  ; LINE 424
 	.byte	TOK_JUMP
 	.word	proc_lbl_DISPLAY_SCORE
-@FastBasic_LINE_430:  ; LINE 430
+@FastBasic_LINE_428:  ; LINE 428
 proc_lbl_S_780:
-@FastBasic_LINE_431:  ; LINE 431
+@FastBasic_LINE_429:  ; LINE 429
 	.byte	TOK_VAR_LOAD
 	.byte	51
 	.byte	TOK_PUSH_VAR_LOAD
@@ -3229,14 +3229,14 @@ proc_lbl_S_780:
 	.byte	TOK_VAR_STORE
 	.byte	51
 jump_lbl_233:
-@FastBasic_LINE_432:  ; LINE 432
+@FastBasic_LINE_430:  ; LINE 430
 	.byte	TOK_NUM
 	.word	53762
 	.byte	TOK_SADDR
 	.byte	TOK_BYTE
 	.byte	32
 	.byte	TOK_POKE
-@FastBasic_LINE_433:  ; LINE 433
+@FastBasic_LINE_431:  ; LINE 431
 	.byte	TOK_VAR_SADDR
 	.byte	9
 	.byte	TOK_PUSH_VAR_LOAD
@@ -3251,7 +3251,7 @@ jump_lbl_233:
 	.byte	TOK_CJUMP
 	.word	jump_lbl_234
 jump_lbl_235:
-@FastBasic_LINE_434:  ; LINE 434
+@FastBasic_LINE_432:  ; LINE 432
 	.byte	TOK_VAR_LOAD
 	.byte	9
 	.byte	TOK_PUSH_BYTE
@@ -3262,30 +3262,30 @@ jump_lbl_235:
 	.byte	TOK_PUSH_BYTE
 	.byte	10
 	.byte	TOK_MOVE
-@FastBasic_LINE_435:  ; LINE 435
+@FastBasic_LINE_433:  ; LINE 433
 	.byte	TOK_FOR_NEXT
 	.byte	TOK_CJUMP
 	.word	jump_lbl_235
 jump_lbl_234:
 	.byte	TOK_FOR_EXIT
-@FastBasic_LINE_436:  ; LINE 436
+@FastBasic_LINE_434:  ; LINE 434
 	.byte	TOK_NUM
 	.word	53762
 	.byte	TOK_SADDR
 	.byte	TOK_0
 	.byte	TOK_POKE
-@FastBasic_LINE_437:  ; LINE 437
+@FastBasic_LINE_435:  ; LINE 435
 	.byte	TOK_INCVAR
 	.byte	37
-@FastBasic_LINE_438:  ; LINE 438
+@FastBasic_LINE_436:  ; LINE 436
 	.byte	TOK_RET
-@FastBasic_LINE_440:  ; LINE 440
+@FastBasic_LINE_438:  ; LINE 438
 proc_lbl_DISPLAY_SCORE:
-@FastBasic_LINE_441:  ; LINE 441
+@FastBasic_LINE_439:  ; LINE 439
 	.byte	TOK_BYTE
 	.byte	CLS
 	.byte	TOK_PUT
-@FastBasic_LINE_442:  ; LINE 442
+@FastBasic_LINE_440:  ; LINE 440
 	.byte	TOK_CSTRING
 	.byte	6, "SCORE:"
 	.byte	TOK_PRINT_STR
@@ -3298,7 +3298,7 @@ proc_lbl_DISPLAY_SCORE:
 	.byte	6, "LEVEL:"
 	.byte	TOK_PRINT_STR
 	.byte	TOK_PRINT_EOL
-@FastBasic_LINE_443:  ; LINE 443
+@FastBasic_LINE_441:  ; LINE 441
 	.byte	TOK_VAR_ADDR
 	.byte	41
 	.byte	TOK_FP_LOAD
@@ -3316,21 +3316,21 @@ proc_lbl_DISPLAY_SCORE:
 	.byte	TOK_FP_INT
 	.byte	TOK_INT_STR
 	.byte	TOK_PRINT_STR
-@FastBasic_LINE_444:  ; LINE 444
+@FastBasic_LINE_442:  ; LINE 442
 	.byte	TOK_RET
-@FastBasic_LINE_446:  ; LINE 446
+@FastBasic_LINE_444:  ; LINE 444
 proc_lbl_S_850:
-@FastBasic_LINE_447:  ; LINE 447
+@FastBasic_LINE_445:  ; LINE 445
 	.byte	TOK_BYTE
 	.byte	29
 	.byte	TOK_VAR_STORE
 	.byte	50
-@FastBasic_LINE_448:  ; LINE 448
+@FastBasic_LINE_446:  ; LINE 446
 	.byte	TOK_BYTE
 	.byte	9
 	.byte	TOK_VAR_STORE
 	.byte	45
-@FastBasic_LINE_449:  ; LINE 449
+@FastBasic_LINE_447:  ; LINE 447
 	.byte	TOK_VAR_LOAD
 	.byte	13
 	.byte	TOK_PUSH_VAR_LOAD
@@ -3344,27 +3344,27 @@ proc_lbl_S_850:
 	.byte	TOK_ADD
 	.byte	TOK_VAR_STORE
 	.byte	46
-@FastBasic_LINE_450:  ; LINE 450
+@FastBasic_LINE_448:  ; LINE 448
 	.byte	TOK_0
 	.byte	TOK_VAR_STORE
 	.byte	26
-@FastBasic_LINE_451:  ; LINE 451
+@FastBasic_LINE_449:  ; LINE 449
 	.byte	TOK_BYTE_SADDR
 	.byte	COLOR
 	.byte	TOK_BYTE
 	.byte	32
 	.byte	TOK_POKE
-@FastBasic_LINE_452:  ; LINE 452
+@FastBasic_LINE_450:  ; LINE 450
 	.byte	TOK_VAR_LOAD
 	.byte	28
 	.byte	TOK_PUSH_1
 	.byte	TOK_EQ
 	.byte	TOK_CJUMP
 	.word	jump_lbl_240
-@FastBasic_LINE_453:  ; LINE 453
+@FastBasic_LINE_451:  ; LINE 451
 	.byte	TOK_CALL
 	.word	proc_lbl_DRAW_PIECE_1
-@FastBasic_LINE_454:  ; LINE 454
+@FastBasic_LINE_452:  ; LINE 452
 	.byte	TOK_JUMP
 	.word	jump_lbl_241
 jump_lbl_240:
@@ -3375,10 +3375,10 @@ jump_lbl_240:
 	.byte	TOK_EQ
 	.byte	TOK_CJUMP
 	.word	jump_lbl_242
-@FastBasic_LINE_455:  ; LINE 455
+@FastBasic_LINE_453:  ; LINE 453
 	.byte	TOK_CALL
 	.word	proc_lbl_DRAW_PIECE_2
-@FastBasic_LINE_456:  ; LINE 456
+@FastBasic_LINE_454:  ; LINE 454
 	.byte	TOK_JUMP
 	.word	jump_lbl_241
 jump_lbl_242:
@@ -3389,10 +3389,10 @@ jump_lbl_242:
 	.byte	TOK_EQ
 	.byte	TOK_CJUMP
 	.word	jump_lbl_244
-@FastBasic_LINE_457:  ; LINE 457
+@FastBasic_LINE_455:  ; LINE 455
 	.byte	TOK_CALL
 	.word	proc_lbl_DRAW_PIECE_3
-@FastBasic_LINE_458:  ; LINE 458
+@FastBasic_LINE_456:  ; LINE 456
 	.byte	TOK_JUMP
 	.word	jump_lbl_241
 jump_lbl_244:
@@ -3403,10 +3403,10 @@ jump_lbl_244:
 	.byte	TOK_EQ
 	.byte	TOK_CJUMP
 	.word	jump_lbl_246
-@FastBasic_LINE_459:  ; LINE 459
+@FastBasic_LINE_457:  ; LINE 457
 	.byte	TOK_CALL
 	.word	proc_lbl_DRAW_PIECE_4
-@FastBasic_LINE_460:  ; LINE 460
+@FastBasic_LINE_458:  ; LINE 458
 	.byte	TOK_JUMP
 	.word	jump_lbl_241
 jump_lbl_246:
@@ -3417,10 +3417,10 @@ jump_lbl_246:
 	.byte	TOK_EQ
 	.byte	TOK_CJUMP
 	.word	jump_lbl_248
-@FastBasic_LINE_461:  ; LINE 461
+@FastBasic_LINE_459:  ; LINE 459
 	.byte	TOK_CALL
 	.word	proc_lbl_DRAW_PIECE_5
-@FastBasic_LINE_462:  ; LINE 462
+@FastBasic_LINE_460:  ; LINE 460
 	.byte	TOK_JUMP
 	.word	jump_lbl_241
 jump_lbl_248:
@@ -3431,10 +3431,10 @@ jump_lbl_248:
 	.byte	TOK_EQ
 	.byte	TOK_CJUMP
 	.word	jump_lbl_250
-@FastBasic_LINE_463:  ; LINE 463
+@FastBasic_LINE_461:  ; LINE 461
 	.byte	TOK_CALL
 	.word	proc_lbl_DRAW_PIECE_6
-@FastBasic_LINE_464:  ; LINE 464
+@FastBasic_LINE_462:  ; LINE 462
 	.byte	TOK_JUMP
 	.word	jump_lbl_241
 jump_lbl_250:
@@ -3445,17 +3445,17 @@ jump_lbl_250:
 	.byte	TOK_EQ
 	.byte	TOK_CJUMP
 	.word	jump_lbl_241
-@FastBasic_LINE_465:  ; LINE 465
+@FastBasic_LINE_463:  ; LINE 463
 	.byte	TOK_CALL
 	.word	proc_lbl_DRAW_PIECE_7
-@FastBasic_LINE_466:  ; LINE 466
+@FastBasic_LINE_464:  ; LINE 464
 jump_lbl_241:
-@FastBasic_LINE_467:  ; LINE 467
+@FastBasic_LINE_465:  ; LINE 465
 	.byte	TOK_VAR_LOAD
 	.byte	28
 	.byte	TOK_VAR_STORE
 	.byte	32
-@FastBasic_LINE_468:  ; LINE 468
+@FastBasic_LINE_466:  ; LINE 466
 	.byte	TOK_1
 	.byte	TOK_PUSH_BYTE
 	.byte	7
@@ -3463,23 +3463,23 @@ jump_lbl_241:
 	.byte	TOK_ADD
 	.byte	TOK_VAR_STORE
 	.byte	28
-@FastBasic_LINE_469:  ; LINE 469
+@FastBasic_LINE_467:  ; LINE 467
 	.byte	TOK_BYTE_SADDR
 	.byte	COLOR
 	.byte	TOK_VAR_LOAD
 	.byte	28
 	.byte	TOK_POKE
-@FastBasic_LINE_470:  ; LINE 470
+@FastBasic_LINE_468:  ; LINE 468
 	.byte	TOK_VAR_LOAD
 	.byte	28
 	.byte	TOK_PUSH_1
 	.byte	TOK_EQ
 	.byte	TOK_CJUMP
 	.word	jump_lbl_253
-@FastBasic_LINE_471:  ; LINE 471
+@FastBasic_LINE_469:  ; LINE 469
 	.byte	TOK_CALL
 	.word	proc_lbl_DRAW_PIECE_1
-@FastBasic_LINE_472:  ; LINE 472
+@FastBasic_LINE_470:  ; LINE 470
 	.byte	TOK_JUMP
 	.word	jump_lbl_254
 jump_lbl_253:
@@ -3490,10 +3490,10 @@ jump_lbl_253:
 	.byte	TOK_EQ
 	.byte	TOK_CJUMP
 	.word	jump_lbl_255
-@FastBasic_LINE_473:  ; LINE 473
+@FastBasic_LINE_471:  ; LINE 471
 	.byte	TOK_CALL
 	.word	proc_lbl_DRAW_PIECE_2
-@FastBasic_LINE_474:  ; LINE 474
+@FastBasic_LINE_472:  ; LINE 472
 	.byte	TOK_JUMP
 	.word	jump_lbl_254
 jump_lbl_255:
@@ -3504,10 +3504,10 @@ jump_lbl_255:
 	.byte	TOK_EQ
 	.byte	TOK_CJUMP
 	.word	jump_lbl_257
-@FastBasic_LINE_475:  ; LINE 475
+@FastBasic_LINE_473:  ; LINE 473
 	.byte	TOK_CALL
 	.word	proc_lbl_DRAW_PIECE_3
-@FastBasic_LINE_476:  ; LINE 476
+@FastBasic_LINE_474:  ; LINE 474
 	.byte	TOK_JUMP
 	.word	jump_lbl_254
 jump_lbl_257:
@@ -3518,10 +3518,10 @@ jump_lbl_257:
 	.byte	TOK_EQ
 	.byte	TOK_CJUMP
 	.word	jump_lbl_259
-@FastBasic_LINE_477:  ; LINE 477
+@FastBasic_LINE_475:  ; LINE 475
 	.byte	TOK_CALL
 	.word	proc_lbl_DRAW_PIECE_4
-@FastBasic_LINE_478:  ; LINE 478
+@FastBasic_LINE_476:  ; LINE 476
 	.byte	TOK_JUMP
 	.word	jump_lbl_254
 jump_lbl_259:
@@ -3532,10 +3532,10 @@ jump_lbl_259:
 	.byte	TOK_EQ
 	.byte	TOK_CJUMP
 	.word	jump_lbl_261
-@FastBasic_LINE_479:  ; LINE 479
+@FastBasic_LINE_477:  ; LINE 477
 	.byte	TOK_CALL
 	.word	proc_lbl_DRAW_PIECE_5
-@FastBasic_LINE_480:  ; LINE 480
+@FastBasic_LINE_478:  ; LINE 478
 	.byte	TOK_JUMP
 	.word	jump_lbl_254
 jump_lbl_261:
@@ -3546,10 +3546,10 @@ jump_lbl_261:
 	.byte	TOK_EQ
 	.byte	TOK_CJUMP
 	.word	jump_lbl_263
-@FastBasic_LINE_481:  ; LINE 481
+@FastBasic_LINE_479:  ; LINE 479
 	.byte	TOK_CALL
 	.word	proc_lbl_DRAW_PIECE_6
-@FastBasic_LINE_482:  ; LINE 482
+@FastBasic_LINE_480:  ; LINE 480
 	.byte	TOK_JUMP
 	.word	jump_lbl_254
 jump_lbl_263:
@@ -3560,12 +3560,12 @@ jump_lbl_263:
 	.byte	TOK_EQ
 	.byte	TOK_CJUMP
 	.word	jump_lbl_254
-@FastBasic_LINE_483:  ; LINE 483
+@FastBasic_LINE_481:  ; LINE 481
 	.byte	TOK_CALL
 	.word	proc_lbl_DRAW_PIECE_7
-@FastBasic_LINE_484:  ; LINE 484
+@FastBasic_LINE_482:  ; LINE 482
 jump_lbl_254:
-@FastBasic_LINE_485:  ; LINE 485
+@FastBasic_LINE_483:  ; LINE 483
 	.byte	TOK_VAR_LOAD
 	.byte	0
 	.byte	TOK_PUSH_VAR_LOAD
@@ -3574,16 +3574,16 @@ jump_lbl_254:
 	.byte	TOK_PEEK
 	.byte	TOK_VAR_STORE
 	.byte	25
-@FastBasic_LINE_486:  ; LINE 486
+@FastBasic_LINE_484:  ; LINE 484
 	.byte	TOK_BYTE
 	.byte	16
 	.byte	TOK_VAR_STORE
 	.byte	50
-@FastBasic_LINE_487:  ; LINE 487
+@FastBasic_LINE_485:  ; LINE 485
 	.byte	TOK_0
 	.byte	TOK_VAR_STORE
 	.byte	45
-@FastBasic_LINE_488:  ; LINE 488
+@FastBasic_LINE_486:  ; LINE 486
 	.byte	TOK_VAR_LOAD
 	.byte	13
 	.byte	TOK_PUSH_VAR_LOAD
@@ -3597,7 +3597,7 @@ jump_lbl_254:
 	.byte	TOK_ADD
 	.byte	TOK_VAR_STORE
 	.byte	46
-@FastBasic_LINE_489:  ; LINE 489
+@FastBasic_LINE_487:  ; LINE 487
 	.byte	TOK_VAR_LOAD
 	.byte	25
 	.byte	TOK_PUSH_0
@@ -3608,12 +3608,12 @@ jump_lbl_254:
 	.byte	TOK_VAR_STORE
 	.byte	25
 jump_lbl_266:
-@FastBasic_LINE_490:  ; LINE 490
+@FastBasic_LINE_488:  ; LINE 488
 	.byte	TOK_BYTE
 	.byte	5
 	.byte	TOK_VAR_STORE
 	.byte	48
-@FastBasic_LINE_491:  ; LINE 491
+@FastBasic_LINE_489:  ; LINE 489
 	.byte	TOK_VAR_LOAD
 	.byte	48
 	.byte	TOK_PUSH_VAR_LOAD
@@ -3634,13 +3634,13 @@ jump_lbl_266:
 	.byte	TOK_FP_INT
 	.byte	TOK_VAR_STORE
 	.byte	48
-@FastBasic_LINE_492:  ; LINE 492
+@FastBasic_LINE_490:  ; LINE 490
 	.byte	TOK_RET
-@FastBasic_LINE_494:  ; LINE 494
+@FastBasic_LINE_492:  ; LINE 492
 proc_lbl_S_900:
-@FastBasic_LINE_495:  ; LINE 495
+@FastBasic_LINE_493:  ; LINE 493
 jump_lbl_270:
-@FastBasic_LINE_496:  ; LINE 496
+@FastBasic_LINE_494:  ; LINE 494
 	.byte	TOK_NUM
 	.word	764
 	.byte	TOK_SADDR
@@ -3649,7 +3649,7 @@ jump_lbl_270:
 	.byte	TOK_POKE
 	.byte	TOK_1
 	.byte	TOK_PAUSE
-@FastBasic_LINE_497:  ; LINE 497
+@FastBasic_LINE_495:  ; LINE 495
 	.byte	TOK_NUM
 	.word	764
 	.byte	TOK_PEEK
@@ -3658,13 +3658,13 @@ jump_lbl_270:
 	.byte	TOK_EQ
 	.byte	TOK_CJUMP
 	.word	jump_lbl_270
-@FastBasic_LINE_498:  ; LINE 498
+@FastBasic_LINE_496:  ; LINE 496
 	.byte	TOK_CSTRING
 	.byte	7, 9, 9, "PAUSE"
 	.byte	TOK_PRINT_STR
-@FastBasic_LINE_499:  ; LINE 499
+@FastBasic_LINE_497:  ; LINE 497
 jump_lbl_271:
-@FastBasic_LINE_500:  ; LINE 500
+@FastBasic_LINE_498:  ; LINE 498
 	.byte	TOK_BYTE_SADDR
 	.byte	77
 	.byte	TOK_BYTE
@@ -3675,7 +3675,7 @@ jump_lbl_271:
 	.byte	TOK_BYTE
 	.byte	246
 	.byte	TOK_POKE
-@FastBasic_LINE_501:  ; LINE 501
+@FastBasic_LINE_499:  ; LINE 499
 	.byte	TOK_NUM
 	.word	764
 	.byte	TOK_PEEK
@@ -3684,33 +3684,33 @@ jump_lbl_271:
 	.byte	TOK_EQ
 	.byte	TOK_CJUMP
 	.word	jump_lbl_271
-@FastBasic_LINE_502:  ; LINE 502
+@FastBasic_LINE_500:  ; LINE 500
 	.byte	TOK_NUM
 	.word	764
 	.byte	TOK_SADDR
 	.byte	TOK_BYTE
 	.byte	255
 	.byte	TOK_POKE
-@FastBasic_LINE_503:  ; LINE 503
+@FastBasic_LINE_501:  ; LINE 501
 	.byte	TOK_CALL
 	.word	proc_lbl_DISPLAY_SCORE
-@FastBasic_LINE_504:  ; LINE 504
+@FastBasic_LINE_502:  ; LINE 502
 	.byte	TOK_BYTE_SADDR
 	.byte	77
 	.byte	TOK_0
 	.byte	TOK_POKE
-@FastBasic_LINE_505:  ; LINE 505
+@FastBasic_LINE_503:  ; LINE 503
 	.byte	TOK_RET
-@FastBasic_LINE_508:  ; LINE 508
+@FastBasic_LINE_506:  ; LINE 506
 proc_lbl_DRAW_PIECE_1:
-@FastBasic_LINE_509:  ; LINE 509
+@FastBasic_LINE_507:  ; LINE 507
 	.byte	TOK_VAR_LOAD
 	.byte	26
 	.byte	TOK_COMP_0
 	.byte	TOK_L_NOT
 	.byte	TOK_CJUMP
 	.word	jump_lbl_274
-@FastBasic_LINE_510:  ; LINE 510
+@FastBasic_LINE_508:  ; LINE 508
 	.byte	TOK_BYTE_SADDR
 	.byte	COLCRS
 	.byte	TOK_VAR_LOAD
@@ -3740,7 +3740,7 @@ proc_lbl_DRAW_PIECE_1:
 	.byte	TOK_BYTE
 	.byte	DRAWLN
 	.byte	TOK_DRAWTO
-@FastBasic_LINE_511:  ; LINE 511
+@FastBasic_LINE_509:  ; LINE 509
 	.byte	TOK_VAR_LOAD
 	.byte	46
 	.byte	TOK_PUSH_BYTE
@@ -3757,7 +3757,7 @@ proc_lbl_DRAW_PIECE_1:
 	.byte	TOK_PEEK
 	.byte	TOK_VAR_STORE
 	.byte	12
-@FastBasic_LINE_512:  ; LINE 512
+@FastBasic_LINE_510:  ; LINE 510
 	.byte	TOK_VAR_LOAD
 	.byte	46
 	.byte	TOK_PUSH_BYTE
@@ -3787,7 +3787,7 @@ proc_lbl_DRAW_PIECE_1:
 	.byte	TOK_BIT_OR
 	.byte	TOK_VAR_STORE
 	.byte	8
-@FastBasic_LINE_513:  ; LINE 513
+@FastBasic_LINE_511:  ; LINE 511
 	.byte	TOK_RET
 jump_lbl_274:
 	.byte	TOK_VAR_LOAD
@@ -3796,7 +3796,7 @@ jump_lbl_274:
 	.byte	TOK_EQ
 	.byte	TOK_CJUMP
 	.word	jump_lbl_276
-@FastBasic_LINE_514:  ; LINE 514
+@FastBasic_LINE_512:  ; LINE 512
 	.byte	TOK_BYTE_SADDR
 	.byte	COLCRS
 	.byte	TOK_VAR_LOAD
@@ -3826,7 +3826,7 @@ jump_lbl_274:
 	.byte	TOK_BYTE
 	.byte	DRAWLN
 	.byte	TOK_DRAWTO
-@FastBasic_LINE_515:  ; LINE 515
+@FastBasic_LINE_513:  ; LINE 513
 	.byte	TOK_VAR_LOAD
 	.byte	46
 	.byte	TOK_PUSH_BYTE
@@ -3855,7 +3855,7 @@ jump_lbl_274:
 	.byte	TOK_ADD
 	.byte	TOK_VAR_STORE
 	.byte	11
-@FastBasic_LINE_516:  ; LINE 516
+@FastBasic_LINE_514:  ; LINE 514
 	.byte	TOK_VAR_LOAD
 	.byte	46
 	.byte	TOK_PUSH_BYTE
@@ -3864,7 +3864,7 @@ jump_lbl_274:
 	.byte	TOK_PEEK
 	.byte	TOK_VAR_STORE
 	.byte	8
-@FastBasic_LINE_517:  ; LINE 517
+@FastBasic_LINE_515:  ; LINE 515
 	.byte	TOK_VAR_LOAD
 	.byte	46
 	.byte	TOK_PUSH_BYTE
@@ -3893,7 +3893,7 @@ jump_lbl_274:
 	.byte	TOK_ADD
 	.byte	TOK_VAR_STORE
 	.byte	12
-@FastBasic_LINE_518:  ; LINE 518
+@FastBasic_LINE_516:  ; LINE 516
 	.byte	TOK_RET
 jump_lbl_276:
 	.byte	TOK_VAR_LOAD
@@ -3903,7 +3903,7 @@ jump_lbl_276:
 	.byte	TOK_EQ
 	.byte	TOK_CJUMP
 	.word	jump_lbl_278
-@FastBasic_LINE_519:  ; LINE 519
+@FastBasic_LINE_517:  ; LINE 517
 	.byte	TOK_BYTE_SADDR
 	.byte	COLCRS
 	.byte	TOK_VAR_LOAD
@@ -3933,7 +3933,7 @@ jump_lbl_276:
 	.byte	TOK_BYTE
 	.byte	DRAWLN
 	.byte	TOK_DRAWTO
-@FastBasic_LINE_520:  ; LINE 520
+@FastBasic_LINE_518:  ; LINE 518
 	.byte	TOK_VAR_LOAD
 	.byte	46
 	.byte	TOK_PUSH_BYTE
@@ -3950,7 +3950,7 @@ jump_lbl_276:
 	.byte	TOK_PEEK
 	.byte	TOK_VAR_STORE
 	.byte	12
-@FastBasic_LINE_521:  ; LINE 521
+@FastBasic_LINE_519:  ; LINE 519
 	.byte	TOK_VAR_LOAD
 	.byte	46
 	.byte	TOK_PUSH_BYTE
@@ -3980,7 +3980,7 @@ jump_lbl_276:
 	.byte	TOK_BIT_OR
 	.byte	TOK_VAR_STORE
 	.byte	8
-@FastBasic_LINE_522:  ; LINE 522
+@FastBasic_LINE_520:  ; LINE 520
 	.byte	TOK_RET
 jump_lbl_278:
 	.byte	TOK_VAR_LOAD
@@ -3989,7 +3989,7 @@ jump_lbl_278:
 	.byte	3
 	.byte	TOK_EQ
 	.byte	TOK_CRET
-@FastBasic_LINE_523:  ; LINE 523
+@FastBasic_LINE_521:  ; LINE 521
 	.byte	TOK_BYTE_SADDR
 	.byte	COLCRS
 	.byte	TOK_VAR_LOAD
@@ -4019,7 +4019,7 @@ jump_lbl_278:
 	.byte	TOK_BYTE
 	.byte	DRAWLN
 	.byte	TOK_DRAWTO
-@FastBasic_LINE_524:  ; LINE 524
+@FastBasic_LINE_522:  ; LINE 522
 	.byte	TOK_VAR_LOAD
 	.byte	46
 	.byte	TOK_PUSH_BYTE
@@ -4048,7 +4048,7 @@ jump_lbl_278:
 	.byte	TOK_ADD
 	.byte	TOK_VAR_STORE
 	.byte	11
-@FastBasic_LINE_525:  ; LINE 525
+@FastBasic_LINE_523:  ; LINE 523
 	.byte	TOK_VAR_LOAD
 	.byte	46
 	.byte	TOK_PUSH_BYTE
@@ -4057,7 +4057,7 @@ jump_lbl_278:
 	.byte	TOK_PEEK
 	.byte	TOK_VAR_STORE
 	.byte	8
-@FastBasic_LINE_526:  ; LINE 526
+@FastBasic_LINE_524:  ; LINE 524
 	.byte	TOK_VAR_LOAD
 	.byte	46
 	.byte	TOK_PUSH_BYTE
@@ -4086,11 +4086,11 @@ jump_lbl_278:
 	.byte	TOK_ADD
 	.byte	TOK_VAR_STORE
 	.byte	12
-@FastBasic_LINE_528:  ; LINE 528
+@FastBasic_LINE_526:  ; LINE 526
 	.byte	TOK_RET
-@FastBasic_LINE_530:  ; LINE 530
+@FastBasic_LINE_528:  ; LINE 528
 proc_lbl_DRAW_PIECE_2:
-@FastBasic_LINE_531:  ; LINE 531
+@FastBasic_LINE_529:  ; LINE 529
 	.byte	TOK_VAR_LOAD
 	.byte	26
 	.byte	TOK_COMP_0
@@ -4103,7 +4103,7 @@ proc_lbl_DRAW_PIECE_2:
 	.byte	TOK_L_OR
 	.byte	TOK_CJUMP
 	.word	jump_lbl_283
-@FastBasic_LINE_532:  ; LINE 532
+@FastBasic_LINE_530:  ; LINE 530
 	.byte	TOK_BYTE_SADDR
 	.byte	COLCRS
 	.byte	TOK_VAR_LOAD
@@ -4156,7 +4156,7 @@ proc_lbl_DRAW_PIECE_2:
 	.byte	TOK_ADD
 	.byte	TOK_POKE
 	.byte	TOK_PLOT
-@FastBasic_LINE_533:  ; LINE 533
+@FastBasic_LINE_531:  ; LINE 531
 	.byte	TOK_VAR_LOAD
 	.byte	46
 	.byte	TOK_PUSH_1
@@ -4171,7 +4171,7 @@ proc_lbl_DRAW_PIECE_2:
 	.byte	TOK_ADD
 	.byte	TOK_VAR_STORE
 	.byte	12
-@FastBasic_LINE_534:  ; LINE 534
+@FastBasic_LINE_532:  ; LINE 532
 	.byte	TOK_VAR_LOAD
 	.byte	46
 	.byte	TOK_PUSH_BYTE
@@ -4187,7 +4187,7 @@ proc_lbl_DRAW_PIECE_2:
 	.byte	TOK_ADD
 	.byte	TOK_VAR_STORE
 	.byte	8
-@FastBasic_LINE_535:  ; LINE 535
+@FastBasic_LINE_533:  ; LINE 533
 	.byte	TOK_VAR_LOAD
 	.byte	46
 	.byte	TOK_PUSH_BYTE
@@ -4203,10 +4203,10 @@ proc_lbl_DRAW_PIECE_2:
 	.byte	TOK_ADD
 	.byte	TOK_VAR_STORE
 	.byte	11
-@FastBasic_LINE_536:  ; LINE 536
+@FastBasic_LINE_534:  ; LINE 534
 	.byte	TOK_RET
 jump_lbl_283:
-@FastBasic_LINE_537:  ; LINE 537
+@FastBasic_LINE_535:  ; LINE 535
 	.byte	TOK_BYTE_SADDR
 	.byte	COLCRS
 	.byte	TOK_VAR_LOAD
@@ -4259,7 +4259,7 @@ jump_lbl_283:
 	.byte	TOK_ADD
 	.byte	TOK_POKE
 	.byte	TOK_PLOT
-@FastBasic_LINE_538:  ; LINE 538
+@FastBasic_LINE_536:  ; LINE 536
 	.byte	TOK_VAR_LOAD
 	.byte	46
 	.byte	TOK_PUSH_BYTE
@@ -4282,7 +4282,7 @@ jump_lbl_283:
 	.byte	TOK_ADD
 	.byte	TOK_VAR_STORE
 	.byte	11
-@FastBasic_LINE_539:  ; LINE 539
+@FastBasic_LINE_537:  ; LINE 537
 	.byte	TOK_VAR_LOAD
 	.byte	46
 	.byte	TOK_PUSH_BYTE
@@ -4304,7 +4304,7 @@ jump_lbl_283:
 	.byte	TOK_ADD
 	.byte	TOK_VAR_STORE
 	.byte	12
-@FastBasic_LINE_540:  ; LINE 540
+@FastBasic_LINE_538:  ; LINE 538
 	.byte	TOK_VAR_LOAD
 	.byte	46
 	.byte	TOK_PUSH_BYTE
@@ -4320,11 +4320,11 @@ jump_lbl_283:
 	.byte	TOK_ADD
 	.byte	TOK_VAR_STORE
 	.byte	8
-@FastBasic_LINE_542:  ; LINE 542
+@FastBasic_LINE_540:  ; LINE 540
 	.byte	TOK_RET
-@FastBasic_LINE_544:  ; LINE 544
+@FastBasic_LINE_542:  ; LINE 542
 proc_lbl_DRAW_PIECE_3:
-@FastBasic_LINE_545:  ; LINE 545
+@FastBasic_LINE_543:  ; LINE 543
 	.byte	TOK_VAR_LOAD
 	.byte	26
 	.byte	TOK_COMP_0
@@ -4337,7 +4337,7 @@ proc_lbl_DRAW_PIECE_3:
 	.byte	TOK_L_OR
 	.byte	TOK_CJUMP
 	.word	jump_lbl_287
-@FastBasic_LINE_546:  ; LINE 546
+@FastBasic_LINE_544:  ; LINE 544
 	.byte	TOK_BYTE_SADDR
 	.byte	COLCRS
 	.byte	TOK_VAR_LOAD
@@ -4390,7 +4390,7 @@ proc_lbl_DRAW_PIECE_3:
 	.byte	TOK_ADD
 	.byte	TOK_POKE
 	.byte	TOK_PLOT
-@FastBasic_LINE_547:  ; LINE 547
+@FastBasic_LINE_545:  ; LINE 545
 	.byte	TOK_VAR_LOAD
 	.byte	46
 	.byte	TOK_PUSH_1
@@ -4405,7 +4405,7 @@ proc_lbl_DRAW_PIECE_3:
 	.byte	TOK_ADD
 	.byte	TOK_VAR_STORE
 	.byte	11
-@FastBasic_LINE_548:  ; LINE 548
+@FastBasic_LINE_546:  ; LINE 546
 	.byte	TOK_VAR_LOAD
 	.byte	46
 	.byte	TOK_PUSH_BYTE
@@ -4421,7 +4421,7 @@ proc_lbl_DRAW_PIECE_3:
 	.byte	TOK_ADD
 	.byte	TOK_VAR_STORE
 	.byte	12
-@FastBasic_LINE_549:  ; LINE 549
+@FastBasic_LINE_547:  ; LINE 547
 	.byte	TOK_VAR_LOAD
 	.byte	46
 	.byte	TOK_PUSH_BYTE
@@ -4437,10 +4437,10 @@ proc_lbl_DRAW_PIECE_3:
 	.byte	TOK_ADD
 	.byte	TOK_VAR_STORE
 	.byte	8
-@FastBasic_LINE_550:  ; LINE 550
+@FastBasic_LINE_548:  ; LINE 548
 	.byte	TOK_RET
 jump_lbl_287:
-@FastBasic_LINE_551:  ; LINE 551
+@FastBasic_LINE_549:  ; LINE 549
 	.byte	TOK_BYTE_SADDR
 	.byte	COLCRS
 	.byte	TOK_VAR_LOAD
@@ -4493,7 +4493,7 @@ jump_lbl_287:
 	.byte	TOK_ADD
 	.byte	TOK_POKE
 	.byte	TOK_PLOT
-@FastBasic_LINE_552:  ; LINE 552
+@FastBasic_LINE_550:  ; LINE 550
 	.byte	TOK_VAR_LOAD
 	.byte	46
 	.byte	TOK_PUSH_BYTE
@@ -4516,7 +4516,7 @@ jump_lbl_287:
 	.byte	TOK_ADD
 	.byte	TOK_VAR_STORE
 	.byte	11
-@FastBasic_LINE_553:  ; LINE 553
+@FastBasic_LINE_551:  ; LINE 551
 	.byte	TOK_VAR_LOAD
 	.byte	46
 	.byte	TOK_PUSH_BYTE
@@ -4538,7 +4538,7 @@ jump_lbl_287:
 	.byte	TOK_ADD
 	.byte	TOK_VAR_STORE
 	.byte	12
-@FastBasic_LINE_554:  ; LINE 554
+@FastBasic_LINE_552:  ; LINE 552
 	.byte	TOK_VAR_LOAD
 	.byte	46
 	.byte	TOK_PUSH_BYTE
@@ -4554,18 +4554,18 @@ jump_lbl_287:
 	.byte	TOK_ADD
 	.byte	TOK_VAR_STORE
 	.byte	8
-@FastBasic_LINE_556:  ; LINE 556
+@FastBasic_LINE_554:  ; LINE 554
 	.byte	TOK_RET
-@FastBasic_LINE_558:  ; LINE 558
+@FastBasic_LINE_556:  ; LINE 556
 proc_lbl_DRAW_PIECE_4:
-@FastBasic_LINE_559:  ; LINE 559
+@FastBasic_LINE_557:  ; LINE 557
 	.byte	TOK_VAR_LOAD
 	.byte	26
 	.byte	TOK_COMP_0
 	.byte	TOK_L_NOT
 	.byte	TOK_CJUMP
 	.word	jump_lbl_291
-@FastBasic_LINE_560:  ; LINE 560
+@FastBasic_LINE_558:  ; LINE 558
 	.byte	TOK_BYTE_SADDR
 	.byte	COLCRS
 	.byte	TOK_VAR_LOAD
@@ -4609,7 +4609,7 @@ proc_lbl_DRAW_PIECE_4:
 	.byte	TOK_BYTE
 	.byte	DRAWLN
 	.byte	TOK_DRAWTO
-@FastBasic_LINE_561:  ; LINE 561
+@FastBasic_LINE_559:  ; LINE 559
 	.byte	TOK_VAR_LOAD
 	.byte	46
 	.byte	TOK_PUSH_1
@@ -4624,7 +4624,7 @@ proc_lbl_DRAW_PIECE_4:
 	.byte	TOK_ADD
 	.byte	TOK_VAR_STORE
 	.byte	11
-@FastBasic_LINE_562:  ; LINE 562
+@FastBasic_LINE_560:  ; LINE 560
 	.byte	TOK_VAR_LOAD
 	.byte	46
 	.byte	TOK_PUSH_1
@@ -4639,7 +4639,7 @@ proc_lbl_DRAW_PIECE_4:
 	.byte	TOK_ADD
 	.byte	TOK_VAR_STORE
 	.byte	12
-@FastBasic_LINE_563:  ; LINE 563
+@FastBasic_LINE_561:  ; LINE 561
 	.byte	TOK_VAR_LOAD
 	.byte	46
 	.byte	TOK_PUSH_BYTE
@@ -4655,7 +4655,7 @@ proc_lbl_DRAW_PIECE_4:
 	.byte	TOK_ADD
 	.byte	TOK_VAR_STORE
 	.byte	8
-@FastBasic_LINE_564:  ; LINE 564
+@FastBasic_LINE_562:  ; LINE 562
 	.byte	TOK_RET
 jump_lbl_291:
 	.byte	TOK_VAR_LOAD
@@ -4664,7 +4664,7 @@ jump_lbl_291:
 	.byte	TOK_EQ
 	.byte	TOK_CJUMP
 	.word	jump_lbl_293
-@FastBasic_LINE_565:  ; LINE 565
+@FastBasic_LINE_563:  ; LINE 563
 	.byte	TOK_BYTE_SADDR
 	.byte	COLCRS
 	.byte	TOK_VAR_LOAD
@@ -4708,7 +4708,7 @@ jump_lbl_291:
 	.byte	TOK_BYTE
 	.byte	DRAWLN
 	.byte	TOK_DRAWTO
-@FastBasic_LINE_566:  ; LINE 566
+@FastBasic_LINE_564:  ; LINE 564
 	.byte	TOK_VAR_LOAD
 	.byte	46
 	.byte	TOK_PUSH_BYTE
@@ -4731,7 +4731,7 @@ jump_lbl_291:
 	.byte	TOK_ADD
 	.byte	TOK_VAR_STORE
 	.byte	11
-@FastBasic_LINE_567:  ; LINE 567
+@FastBasic_LINE_565:  ; LINE 565
 	.byte	TOK_VAR_LOAD
 	.byte	46
 	.byte	TOK_PUSH_BYTE
@@ -4753,7 +4753,7 @@ jump_lbl_291:
 	.byte	TOK_ADD
 	.byte	TOK_VAR_STORE
 	.byte	12
-@FastBasic_LINE_568:  ; LINE 568
+@FastBasic_LINE_566:  ; LINE 566
 	.byte	TOK_VAR_LOAD
 	.byte	46
 	.byte	TOK_PUSH_BYTE
@@ -4769,7 +4769,7 @@ jump_lbl_291:
 	.byte	TOK_ADD
 	.byte	TOK_VAR_STORE
 	.byte	8
-@FastBasic_LINE_569:  ; LINE 569
+@FastBasic_LINE_567:  ; LINE 567
 	.byte	TOK_RET
 jump_lbl_293:
 	.byte	TOK_VAR_LOAD
@@ -4779,7 +4779,7 @@ jump_lbl_293:
 	.byte	TOK_EQ
 	.byte	TOK_CJUMP
 	.word	jump_lbl_295
-@FastBasic_LINE_570:  ; LINE 570
+@FastBasic_LINE_568:  ; LINE 568
 	.byte	TOK_BYTE_SADDR
 	.byte	COLCRS
 	.byte	TOK_VAR_LOAD
@@ -4823,7 +4823,7 @@ jump_lbl_293:
 	.byte	TOK_BYTE
 	.byte	DRAWLN
 	.byte	TOK_DRAWTO
-@FastBasic_LINE_571:  ; LINE 571
+@FastBasic_LINE_569:  ; LINE 569
 	.byte	TOK_VAR_LOAD
 	.byte	46
 	.byte	TOK_PUSH_1
@@ -4838,7 +4838,7 @@ jump_lbl_293:
 	.byte	TOK_ADD
 	.byte	TOK_VAR_STORE
 	.byte	11
-@FastBasic_LINE_572:  ; LINE 572
+@FastBasic_LINE_570:  ; LINE 570
 	.byte	TOK_VAR_LOAD
 	.byte	46
 	.byte	TOK_PUSH_1
@@ -4853,7 +4853,7 @@ jump_lbl_293:
 	.byte	TOK_ADD
 	.byte	TOK_VAR_STORE
 	.byte	12
-@FastBasic_LINE_573:  ; LINE 573
+@FastBasic_LINE_571:  ; LINE 571
 	.byte	TOK_VAR_LOAD
 	.byte	46
 	.byte	TOK_PUSH_1
@@ -4874,7 +4874,7 @@ jump_lbl_293:
 	.byte	TOK_ADD
 	.byte	TOK_VAR_STORE
 	.byte	8
-@FastBasic_LINE_574:  ; LINE 574
+@FastBasic_LINE_572:  ; LINE 572
 	.byte	TOK_RET
 jump_lbl_295:
 	.byte	TOK_VAR_LOAD
@@ -4883,7 +4883,7 @@ jump_lbl_295:
 	.byte	3
 	.byte	TOK_EQ
 	.byte	TOK_CRET
-@FastBasic_LINE_575:  ; LINE 575
+@FastBasic_LINE_573:  ; LINE 573
 	.byte	TOK_BYTE_SADDR
 	.byte	COLCRS
 	.byte	TOK_VAR_LOAD
@@ -4927,7 +4927,7 @@ jump_lbl_295:
 	.byte	TOK_BYTE
 	.byte	DRAWLN
 	.byte	TOK_DRAWTO
-@FastBasic_LINE_576:  ; LINE 576
+@FastBasic_LINE_574:  ; LINE 574
 	.byte	TOK_VAR_LOAD
 	.byte	46
 	.byte	TOK_PUSH_BYTE
@@ -4949,7 +4949,7 @@ jump_lbl_295:
 	.byte	TOK_ADD
 	.byte	TOK_VAR_STORE
 	.byte	11
-@FastBasic_LINE_577:  ; LINE 577
+@FastBasic_LINE_575:  ; LINE 575
 	.byte	TOK_VAR_LOAD
 	.byte	46
 	.byte	TOK_PUSH_BYTE
@@ -4972,7 +4972,7 @@ jump_lbl_295:
 	.byte	TOK_ADD
 	.byte	TOK_VAR_STORE
 	.byte	12
-@FastBasic_LINE_578:  ; LINE 578
+@FastBasic_LINE_576:  ; LINE 576
 	.byte	TOK_VAR_LOAD
 	.byte	46
 	.byte	TOK_PUSH_BYTE
@@ -4988,18 +4988,18 @@ jump_lbl_295:
 	.byte	TOK_ADD
 	.byte	TOK_VAR_STORE
 	.byte	8
-@FastBasic_LINE_580:  ; LINE 580
+@FastBasic_LINE_578:  ; LINE 578
 	.byte	TOK_RET
-@FastBasic_LINE_582:  ; LINE 582
+@FastBasic_LINE_580:  ; LINE 580
 proc_lbl_DRAW_PIECE_5:
-@FastBasic_LINE_583:  ; LINE 583
+@FastBasic_LINE_581:  ; LINE 581
 	.byte	TOK_VAR_LOAD
 	.byte	26
 	.byte	TOK_COMP_0
 	.byte	TOK_L_NOT
 	.byte	TOK_CJUMP
 	.word	jump_lbl_300
-@FastBasic_LINE_584:  ; LINE 584
+@FastBasic_LINE_582:  ; LINE 582
 	.byte	TOK_BYTE_SADDR
 	.byte	COLCRS
 	.byte	TOK_VAR_LOAD
@@ -5043,7 +5043,7 @@ proc_lbl_DRAW_PIECE_5:
 	.byte	TOK_ADD
 	.byte	TOK_POKE
 	.byte	TOK_PLOT
-@FastBasic_LINE_585:  ; LINE 585
+@FastBasic_LINE_583:  ; LINE 583
 	.byte	TOK_VAR_LOAD
 	.byte	46
 	.byte	TOK_PUSH_BYTE
@@ -5059,7 +5059,7 @@ proc_lbl_DRAW_PIECE_5:
 	.byte	TOK_ADD
 	.byte	TOK_VAR_STORE
 	.byte	11
-@FastBasic_LINE_586:  ; LINE 586
+@FastBasic_LINE_584:  ; LINE 584
 	.byte	TOK_VAR_LOAD
 	.byte	46
 	.byte	TOK_PUSH_BYTE
@@ -5075,7 +5075,7 @@ proc_lbl_DRAW_PIECE_5:
 	.byte	TOK_ADD
 	.byte	TOK_VAR_STORE
 	.byte	12
-@FastBasic_LINE_587:  ; LINE 587
+@FastBasic_LINE_585:  ; LINE 585
 	.byte	TOK_VAR_LOAD
 	.byte	46
 	.byte	TOK_PUSH_BYTE
@@ -5098,7 +5098,7 @@ proc_lbl_DRAW_PIECE_5:
 	.byte	TOK_ADD
 	.byte	TOK_VAR_STORE
 	.byte	8
-@FastBasic_LINE_588:  ; LINE 588
+@FastBasic_LINE_586:  ; LINE 586
 	.byte	TOK_RET
 jump_lbl_300:
 	.byte	TOK_VAR_LOAD
@@ -5107,7 +5107,7 @@ jump_lbl_300:
 	.byte	TOK_EQ
 	.byte	TOK_CJUMP
 	.word	jump_lbl_302
-@FastBasic_LINE_589:  ; LINE 589
+@FastBasic_LINE_587:  ; LINE 587
 	.byte	TOK_BYTE_SADDR
 	.byte	COLCRS
 	.byte	TOK_VAR_LOAD
@@ -5151,7 +5151,7 @@ jump_lbl_300:
 	.byte	TOK_BYTE
 	.byte	DRAWLN
 	.byte	TOK_DRAWTO
-@FastBasic_LINE_590:  ; LINE 590
+@FastBasic_LINE_588:  ; LINE 588
 	.byte	TOK_VAR_LOAD
 	.byte	46
 	.byte	TOK_PUSH_BYTE
@@ -5173,7 +5173,7 @@ jump_lbl_300:
 	.byte	TOK_ADD
 	.byte	TOK_VAR_STORE
 	.byte	11
-@FastBasic_LINE_591:  ; LINE 591
+@FastBasic_LINE_589:  ; LINE 589
 	.byte	TOK_VAR_LOAD
 	.byte	46
 	.byte	TOK_PUSH_BYTE
@@ -5195,7 +5195,7 @@ jump_lbl_300:
 	.byte	TOK_ADD
 	.byte	TOK_VAR_STORE
 	.byte	12
-@FastBasic_LINE_592:  ; LINE 592
+@FastBasic_LINE_590:  ; LINE 590
 	.byte	TOK_VAR_LOAD
 	.byte	46
 	.byte	TOK_PUSH_1
@@ -5210,7 +5210,7 @@ jump_lbl_300:
 	.byte	TOK_ADD
 	.byte	TOK_VAR_STORE
 	.byte	8
-@FastBasic_LINE_593:  ; LINE 593
+@FastBasic_LINE_591:  ; LINE 591
 	.byte	TOK_RET
 jump_lbl_302:
 	.byte	TOK_VAR_LOAD
@@ -5220,7 +5220,7 @@ jump_lbl_302:
 	.byte	TOK_EQ
 	.byte	TOK_CJUMP
 	.word	jump_lbl_304
-@FastBasic_LINE_594:  ; LINE 594
+@FastBasic_LINE_592:  ; LINE 592
 	.byte	TOK_BYTE_SADDR
 	.byte	COLCRS
 	.byte	TOK_VAR_LOAD
@@ -5264,7 +5264,7 @@ jump_lbl_302:
 	.byte	TOK_BYTE
 	.byte	DRAWLN
 	.byte	TOK_DRAWTO
-@FastBasic_LINE_595:  ; LINE 595
+@FastBasic_LINE_593:  ; LINE 593
 	.byte	TOK_VAR_LOAD
 	.byte	46
 	.byte	TOK_PUSH_BYTE
@@ -5280,7 +5280,7 @@ jump_lbl_302:
 	.byte	TOK_ADD
 	.byte	TOK_VAR_STORE
 	.byte	11
-@FastBasic_LINE_596:  ; LINE 596
+@FastBasic_LINE_594:  ; LINE 594
 	.byte	TOK_VAR_LOAD
 	.byte	46
 	.byte	TOK_PUSH_BYTE
@@ -5296,7 +5296,7 @@ jump_lbl_302:
 	.byte	TOK_ADD
 	.byte	TOK_VAR_STORE
 	.byte	12
-@FastBasic_LINE_597:  ; LINE 597
+@FastBasic_LINE_595:  ; LINE 595
 	.byte	TOK_VAR_LOAD
 	.byte	46
 	.byte	TOK_PUSH_BYTE
@@ -5312,7 +5312,7 @@ jump_lbl_302:
 	.byte	TOK_ADD
 	.byte	TOK_VAR_STORE
 	.byte	8
-@FastBasic_LINE_598:  ; LINE 598
+@FastBasic_LINE_596:  ; LINE 596
 	.byte	TOK_RET
 jump_lbl_304:
 	.byte	TOK_VAR_LOAD
@@ -5321,7 +5321,7 @@ jump_lbl_304:
 	.byte	3
 	.byte	TOK_EQ
 	.byte	TOK_CRET
-@FastBasic_LINE_599:  ; LINE 599
+@FastBasic_LINE_597:  ; LINE 597
 	.byte	TOK_BYTE_SADDR
 	.byte	COLCRS
 	.byte	TOK_VAR_LOAD
@@ -5365,7 +5365,7 @@ jump_lbl_304:
 	.byte	TOK_ADD
 	.byte	TOK_POKE
 	.byte	TOK_PLOT
-@FastBasic_LINE_600:  ; LINE 600
+@FastBasic_LINE_598:  ; LINE 598
 	.byte	TOK_VAR_LOAD
 	.byte	46
 	.byte	TOK_PUSH_BYTE
@@ -5387,7 +5387,7 @@ jump_lbl_304:
 	.byte	TOK_ADD
 	.byte	TOK_VAR_STORE
 	.byte	11
-@FastBasic_LINE_601:  ; LINE 601
+@FastBasic_LINE_599:  ; LINE 599
 	.byte	TOK_VAR_LOAD
 	.byte	46
 	.byte	TOK_PUSH_BYTE
@@ -5409,7 +5409,7 @@ jump_lbl_304:
 	.byte	TOK_ADD
 	.byte	TOK_VAR_STORE
 	.byte	12
-@FastBasic_LINE_602:  ; LINE 602
+@FastBasic_LINE_600:  ; LINE 600
 	.byte	TOK_VAR_LOAD
 	.byte	46
 	.byte	TOK_PUSH_BYTE
@@ -5425,18 +5425,18 @@ jump_lbl_304:
 	.byte	TOK_ADD
 	.byte	TOK_VAR_STORE
 	.byte	8
-@FastBasic_LINE_604:  ; LINE 604
+@FastBasic_LINE_602:  ; LINE 602
 	.byte	TOK_RET
-@FastBasic_LINE_606:  ; LINE 606
+@FastBasic_LINE_604:  ; LINE 604
 proc_lbl_DRAW_PIECE_6:
-@FastBasic_LINE_607:  ; LINE 607
+@FastBasic_LINE_605:  ; LINE 605
 	.byte	TOK_VAR_LOAD
 	.byte	26
 	.byte	TOK_COMP_0
 	.byte	TOK_L_NOT
 	.byte	TOK_CJUMP
 	.word	jump_lbl_309
-@FastBasic_LINE_608:  ; LINE 608
+@FastBasic_LINE_606:  ; LINE 606
 	.byte	TOK_BYTE_SADDR
 	.byte	COLCRS
 	.byte	TOK_VAR_LOAD
@@ -5480,7 +5480,7 @@ proc_lbl_DRAW_PIECE_6:
 	.byte	TOK_ADD
 	.byte	TOK_POKE
 	.byte	TOK_PLOT
-@FastBasic_LINE_609:  ; LINE 609
+@FastBasic_LINE_607:  ; LINE 607
 	.byte	TOK_VAR_LOAD
 	.byte	46
 	.byte	TOK_PUSH_BYTE
@@ -5496,7 +5496,7 @@ proc_lbl_DRAW_PIECE_6:
 	.byte	TOK_ADD
 	.byte	TOK_VAR_STORE
 	.byte	11
-@FastBasic_LINE_610:  ; LINE 610
+@FastBasic_LINE_608:  ; LINE 608
 	.byte	TOK_VAR_LOAD
 	.byte	46
 	.byte	TOK_PUSH_BYTE
@@ -5512,7 +5512,7 @@ proc_lbl_DRAW_PIECE_6:
 	.byte	TOK_ADD
 	.byte	TOK_VAR_STORE
 	.byte	12
-@FastBasic_LINE_611:  ; LINE 611
+@FastBasic_LINE_609:  ; LINE 609
 	.byte	TOK_VAR_LOAD
 	.byte	46
 	.byte	TOK_PUSH_BYTE
@@ -5535,7 +5535,7 @@ proc_lbl_DRAW_PIECE_6:
 	.byte	TOK_ADD
 	.byte	TOK_VAR_STORE
 	.byte	8
-@FastBasic_LINE_612:  ; LINE 612
+@FastBasic_LINE_610:  ; LINE 610
 	.byte	TOK_RET
 jump_lbl_309:
 	.byte	TOK_VAR_LOAD
@@ -5544,7 +5544,7 @@ jump_lbl_309:
 	.byte	TOK_EQ
 	.byte	TOK_CJUMP
 	.word	jump_lbl_311
-@FastBasic_LINE_613:  ; LINE 613
+@FastBasic_LINE_611:  ; LINE 611
 	.byte	TOK_BYTE_SADDR
 	.byte	COLCRS
 	.byte	TOK_VAR_LOAD
@@ -5588,7 +5588,7 @@ jump_lbl_309:
 	.byte	TOK_SUB
 	.byte	TOK_POKE
 	.byte	TOK_PLOT
-@FastBasic_LINE_614:  ; LINE 614
+@FastBasic_LINE_612:  ; LINE 612
 	.byte	TOK_VAR_LOAD
 	.byte	46
 	.byte	TOK_PUSH_BYTE
@@ -5610,7 +5610,7 @@ jump_lbl_309:
 	.byte	TOK_ADD
 	.byte	TOK_VAR_STORE
 	.byte	11
-@FastBasic_LINE_615:  ; LINE 615
+@FastBasic_LINE_613:  ; LINE 613
 	.byte	TOK_VAR_LOAD
 	.byte	46
 	.byte	TOK_PUSH_BYTE
@@ -5632,7 +5632,7 @@ jump_lbl_309:
 	.byte	TOK_ADD
 	.byte	TOK_VAR_STORE
 	.byte	12
-@FastBasic_LINE_616:  ; LINE 616
+@FastBasic_LINE_614:  ; LINE 614
 	.byte	TOK_VAR_LOAD
 	.byte	46
 	.byte	TOK_PUSH_1
@@ -5647,7 +5647,7 @@ jump_lbl_309:
 	.byte	TOK_ADD
 	.byte	TOK_VAR_STORE
 	.byte	8
-@FastBasic_LINE_617:  ; LINE 617
+@FastBasic_LINE_615:  ; LINE 615
 	.byte	TOK_RET
 jump_lbl_311:
 	.byte	TOK_VAR_LOAD
@@ -5657,7 +5657,7 @@ jump_lbl_311:
 	.byte	TOK_EQ
 	.byte	TOK_CJUMP
 	.word	jump_lbl_313
-@FastBasic_LINE_618:  ; LINE 618
+@FastBasic_LINE_616:  ; LINE 616
 	.byte	TOK_BYTE_SADDR
 	.byte	COLCRS
 	.byte	TOK_VAR_LOAD
@@ -5701,7 +5701,7 @@ jump_lbl_311:
 	.byte	TOK_BYTE
 	.byte	DRAWLN
 	.byte	TOK_DRAWTO
-@FastBasic_LINE_619:  ; LINE 619
+@FastBasic_LINE_617:  ; LINE 617
 	.byte	TOK_VAR_LOAD
 	.byte	46
 	.byte	TOK_PUSH_BYTE
@@ -5717,7 +5717,7 @@ jump_lbl_311:
 	.byte	TOK_ADD
 	.byte	TOK_VAR_STORE
 	.byte	11
-@FastBasic_LINE_620:  ; LINE 620
+@FastBasic_LINE_618:  ; LINE 618
 	.byte	TOK_VAR_LOAD
 	.byte	46
 	.byte	TOK_PUSH_BYTE
@@ -5733,7 +5733,7 @@ jump_lbl_311:
 	.byte	TOK_ADD
 	.byte	TOK_VAR_STORE
 	.byte	12
-@FastBasic_LINE_621:  ; LINE 621
+@FastBasic_LINE_619:  ; LINE 619
 	.byte	TOK_VAR_LOAD
 	.byte	46
 	.byte	TOK_PUSH_BYTE
@@ -5756,7 +5756,7 @@ jump_lbl_311:
 	.byte	TOK_ADD
 	.byte	TOK_VAR_STORE
 	.byte	8
-@FastBasic_LINE_622:  ; LINE 622
+@FastBasic_LINE_620:  ; LINE 620
 	.byte	TOK_RET
 jump_lbl_313:
 	.byte	TOK_VAR_LOAD
@@ -5765,7 +5765,7 @@ jump_lbl_313:
 	.byte	3
 	.byte	TOK_EQ
 	.byte	TOK_CRET
-@FastBasic_LINE_623:  ; LINE 623
+@FastBasic_LINE_621:  ; LINE 621
 	.byte	TOK_BYTE_SADDR
 	.byte	COLCRS
 	.byte	TOK_VAR_LOAD
@@ -5809,7 +5809,7 @@ jump_lbl_313:
 	.byte	TOK_ADD
 	.byte	TOK_POKE
 	.byte	TOK_PLOT
-@FastBasic_LINE_624:  ; LINE 624
+@FastBasic_LINE_622:  ; LINE 622
 	.byte	TOK_VAR_LOAD
 	.byte	46
 	.byte	TOK_PUSH_BYTE
@@ -5831,7 +5831,7 @@ jump_lbl_313:
 	.byte	TOK_ADD
 	.byte	TOK_VAR_STORE
 	.byte	11
-@FastBasic_LINE_625:  ; LINE 625
+@FastBasic_LINE_623:  ; LINE 623
 	.byte	TOK_VAR_LOAD
 	.byte	46
 	.byte	TOK_PUSH_BYTE
@@ -5853,7 +5853,7 @@ jump_lbl_313:
 	.byte	TOK_ADD
 	.byte	TOK_VAR_STORE
 	.byte	12
-@FastBasic_LINE_626:  ; LINE 626
+@FastBasic_LINE_624:  ; LINE 624
 	.byte	TOK_VAR_LOAD
 	.byte	46
 	.byte	TOK_PUSH_BYTE
@@ -5869,11 +5869,11 @@ jump_lbl_313:
 	.byte	TOK_ADD
 	.byte	TOK_VAR_STORE
 	.byte	8
-@FastBasic_LINE_628:  ; LINE 628
+@FastBasic_LINE_626:  ; LINE 626
 	.byte	TOK_RET
-@FastBasic_LINE_630:  ; LINE 630
+@FastBasic_LINE_628:  ; LINE 628
 proc_lbl_DRAW_PIECE_7:
-@FastBasic_LINE_631:  ; LINE 631
+@FastBasic_LINE_629:  ; LINE 629
 	.byte	TOK_BYTE_SADDR
 	.byte	COLCRS
 	.byte	TOK_VAR_LOAD
@@ -5926,7 +5926,7 @@ proc_lbl_DRAW_PIECE_7:
 	.byte	TOK_ADD
 	.byte	TOK_POKE
 	.byte	TOK_PLOT
-@FastBasic_LINE_632:  ; LINE 632
+@FastBasic_LINE_630:  ; LINE 630
 	.byte	TOK_VAR_LOAD
 	.byte	46
 	.byte	TOK_PUSH_1
@@ -5941,7 +5941,7 @@ proc_lbl_DRAW_PIECE_7:
 	.byte	TOK_ADD
 	.byte	TOK_VAR_STORE
 	.byte	11
-@FastBasic_LINE_633:  ; LINE 633
+@FastBasic_LINE_631:  ; LINE 631
 	.byte	TOK_VAR_LOAD
 	.byte	46
 	.byte	TOK_PUSH_BYTE
@@ -5957,7 +5957,7 @@ proc_lbl_DRAW_PIECE_7:
 	.byte	TOK_ADD
 	.byte	TOK_VAR_STORE
 	.byte	8
-@FastBasic_LINE_634:  ; LINE 634
+@FastBasic_LINE_632:  ; LINE 632
 	.byte	TOK_VAR_LOAD
 	.byte	46
 	.byte	TOK_PUSH_BYTE
@@ -5973,18 +5973,18 @@ proc_lbl_DRAW_PIECE_7:
 	.byte	TOK_ADD
 	.byte	TOK_VAR_STORE
 	.byte	12
-@FastBasic_LINE_635:  ; LINE 635
+@FastBasic_LINE_633:  ; LINE 633
 	.byte	TOK_RET
-@FastBasic_LINE_639:  ; LINE 639
+@FastBasic_LINE_637:  ; LINE 637
 proc_lbl_CHECK_PIECE_1:
-@FastBasic_LINE_640:  ; LINE 640
+@FastBasic_LINE_638:  ; LINE 638
 	.byte	TOK_VAR_LOAD
 	.byte	26
 	.byte	TOK_COMP_0
 	.byte	TOK_L_NOT
 	.byte	TOK_CJUMP
 	.word	jump_lbl_320
-@FastBasic_LINE_641:  ; LINE 641
+@FastBasic_LINE_639:  ; LINE 639
 	.byte	TOK_VAR_LOAD
 	.byte	46
 	.byte	TOK_PUSH_1
@@ -6009,7 +6009,7 @@ proc_lbl_CHECK_PIECE_1:
 	.byte	TOK_BIT_OR
 	.byte	TOK_VAR_STORE
 	.byte	49
-@FastBasic_LINE_642:  ; LINE 642
+@FastBasic_LINE_640:  ; LINE 640
 	.byte	TOK_RET
 jump_lbl_320:
 	.byte	TOK_VAR_LOAD
@@ -6018,7 +6018,7 @@ jump_lbl_320:
 	.byte	TOK_EQ
 	.byte	TOK_CJUMP
 	.word	jump_lbl_322
-@FastBasic_LINE_643:  ; LINE 643
+@FastBasic_LINE_641:  ; LINE 641
 	.byte	TOK_VAR_LOAD
 	.byte	46
 	.byte	TOK_PUSH_BYTE
@@ -6045,7 +6045,7 @@ jump_lbl_320:
 	.byte	TOK_BIT_OR
 	.byte	TOK_VAR_STORE
 	.byte	49
-@FastBasic_LINE_644:  ; LINE 644
+@FastBasic_LINE_642:  ; LINE 642
 	.byte	TOK_RET
 jump_lbl_322:
 	.byte	TOK_VAR_LOAD
@@ -6055,7 +6055,7 @@ jump_lbl_322:
 	.byte	TOK_EQ
 	.byte	TOK_CJUMP
 	.word	jump_lbl_324
-@FastBasic_LINE_645:  ; LINE 645
+@FastBasic_LINE_643:  ; LINE 643
 	.byte	TOK_VAR_LOAD
 	.byte	46
 	.byte	TOK_PUSH_BYTE
@@ -6080,7 +6080,7 @@ jump_lbl_322:
 	.byte	TOK_BIT_OR
 	.byte	TOK_VAR_STORE
 	.byte	49
-@FastBasic_LINE_646:  ; LINE 646
+@FastBasic_LINE_644:  ; LINE 644
 	.byte	TOK_RET
 jump_lbl_324:
 	.byte	TOK_VAR_LOAD
@@ -6089,7 +6089,7 @@ jump_lbl_324:
 	.byte	3
 	.byte	TOK_EQ
 	.byte	TOK_CRET
-@FastBasic_LINE_647:  ; LINE 647
+@FastBasic_LINE_645:  ; LINE 645
 	.byte	TOK_VAR_LOAD
 	.byte	46
 	.byte	TOK_PUSH_BYTE
@@ -6116,18 +6116,18 @@ jump_lbl_324:
 	.byte	TOK_BIT_OR
 	.byte	TOK_VAR_STORE
 	.byte	49
-@FastBasic_LINE_649:  ; LINE 649
+@FastBasic_LINE_647:  ; LINE 647
 	.byte	TOK_RET
-@FastBasic_LINE_651:  ; LINE 651
+@FastBasic_LINE_649:  ; LINE 649
 proc_lbl_CHECK_PIECE_2:
-@FastBasic_LINE_652:  ; LINE 652
+@FastBasic_LINE_650:  ; LINE 650
 	.byte	TOK_VAR_LOAD
 	.byte	26
 	.byte	TOK_COMP_0
 	.byte	TOK_L_NOT
 	.byte	TOK_CJUMP
 	.word	jump_lbl_329
-@FastBasic_LINE_653:  ; LINE 653
+@FastBasic_LINE_651:  ; LINE 651
 	.byte	TOK_VAR_LOAD
 	.byte	46
 	.byte	TOK_PUSH_1
@@ -6146,7 +6146,7 @@ proc_lbl_CHECK_PIECE_2:
 	.byte	TOK_ADD
 	.byte	TOK_VAR_STORE
 	.byte	49
-@FastBasic_LINE_654:  ; LINE 654
+@FastBasic_LINE_652:  ; LINE 652
 	.byte	TOK_RET
 jump_lbl_329:
 	.byte	TOK_VAR_LOAD
@@ -6155,7 +6155,7 @@ jump_lbl_329:
 	.byte	TOK_EQ
 	.byte	TOK_CJUMP
 	.word	jump_lbl_331
-@FastBasic_LINE_655:  ; LINE 655
+@FastBasic_LINE_653:  ; LINE 653
 	.byte	TOK_VAR_LOAD
 	.byte	46
 	.byte	TOK_PUSH_BYTE
@@ -6177,7 +6177,7 @@ jump_lbl_329:
 	.byte	TOK_ADD
 	.byte	TOK_VAR_STORE
 	.byte	49
-@FastBasic_LINE_656:  ; LINE 656
+@FastBasic_LINE_654:  ; LINE 654
 	.byte	TOK_RET
 jump_lbl_331:
 	.byte	TOK_VAR_LOAD
@@ -6187,7 +6187,7 @@ jump_lbl_331:
 	.byte	TOK_EQ
 	.byte	TOK_CJUMP
 	.word	jump_lbl_333
-@FastBasic_LINE_657:  ; LINE 657
+@FastBasic_LINE_655:  ; LINE 655
 	.byte	TOK_VAR_LOAD
 	.byte	46
 	.byte	TOK_PUSH_1
@@ -6206,7 +6206,7 @@ jump_lbl_331:
 	.byte	TOK_ADD
 	.byte	TOK_VAR_STORE
 	.byte	49
-@FastBasic_LINE_658:  ; LINE 658
+@FastBasic_LINE_656:  ; LINE 656
 	.byte	TOK_RET
 jump_lbl_333:
 	.byte	TOK_VAR_LOAD
@@ -6215,7 +6215,7 @@ jump_lbl_333:
 	.byte	3
 	.byte	TOK_EQ
 	.byte	TOK_CRET
-@FastBasic_LINE_659:  ; LINE 659
+@FastBasic_LINE_657:  ; LINE 657
 	.byte	TOK_VAR_LOAD
 	.byte	46
 	.byte	TOK_PUSH_BYTE
@@ -6237,22 +6237,53 @@ jump_lbl_333:
 	.byte	TOK_ADD
 	.byte	TOK_VAR_STORE
 	.byte	49
-@FastBasic_LINE_661:  ; LINE 661
+@FastBasic_LINE_659:  ; LINE 659
 	.byte	TOK_RET
-@FastBasic_LINE_663:  ; LINE 663
+@FastBasic_LINE_661:  ; LINE 661
 proc_lbl_CHECK_PIECE_3:
-@FastBasic_LINE_664:  ; LINE 664
+@FastBasic_LINE_662:  ; LINE 662
 	.byte	TOK_VAR_LOAD
 	.byte	26
 	.byte	TOK_COMP_0
 	.byte	TOK_L_NOT
 	.byte	TOK_CJUMP
 	.word	jump_lbl_338
-@FastBasic_LINE_665:  ; LINE 665
+@FastBasic_LINE_663:  ; LINE 663
 	.byte	TOK_VAR_LOAD
 	.byte	46
 	.byte	TOK_PUSH_1
 	.byte	TOK_ADD
+	.byte	TOK_PEEK
+	.byte	TOK_PUSH_VAR_LOAD
+	.byte	46
+	.byte	TOK_PUSH_1
+	.byte	TOK_SUB
+	.byte	TOK_DPEEK
+	.byte	TOK_PUSH_VAR_LOAD
+	.byte	46
+	.byte	TOK_PUSH_BYTE
+	.byte	40
+	.byte	TOK_ADD
+	.byte	TOK_PEEK
+	.byte	TOK_BIT_OR
+	.byte	TOK_ADD
+	.byte	TOK_VAR_STORE
+	.byte	49
+@FastBasic_LINE_664:  ; LINE 664
+	.byte	TOK_RET
+jump_lbl_338:
+	.byte	TOK_VAR_LOAD
+	.byte	26
+	.byte	TOK_PUSH_1
+	.byte	TOK_EQ
+	.byte	TOK_CJUMP
+	.word	jump_lbl_340
+@FastBasic_LINE_665:  ; LINE 665
+	.byte	TOK_VAR_LOAD
+	.byte	46
+	.byte	TOK_PUSH_BYTE
+	.byte	41
+	.byte	TOK_SUB
 	.byte	TOK_PEEK
 	.byte	TOK_PUSH_VAR_LOAD
 	.byte	46
@@ -6271,19 +6302,19 @@ proc_lbl_CHECK_PIECE_3:
 	.byte	49
 @FastBasic_LINE_666:  ; LINE 666
 	.byte	TOK_RET
-jump_lbl_338:
+jump_lbl_340:
 	.byte	TOK_VAR_LOAD
 	.byte	26
-	.byte	TOK_PUSH_1
+	.byte	TOK_PUSH_BYTE
+	.byte	2
 	.byte	TOK_EQ
 	.byte	TOK_CJUMP
-	.word	jump_lbl_340
+	.word	jump_lbl_342
 @FastBasic_LINE_667:  ; LINE 667
 	.byte	TOK_VAR_LOAD
 	.byte	46
-	.byte	TOK_PUSH_BYTE
-	.byte	41
-	.byte	TOK_SUB
+	.byte	TOK_PUSH_1
+	.byte	TOK_ADD
 	.byte	TOK_PEEK
 	.byte	TOK_PUSH_VAR_LOAD
 	.byte	46
@@ -6302,37 +6333,6 @@ jump_lbl_338:
 	.byte	49
 @FastBasic_LINE_668:  ; LINE 668
 	.byte	TOK_RET
-jump_lbl_340:
-	.byte	TOK_VAR_LOAD
-	.byte	26
-	.byte	TOK_PUSH_BYTE
-	.byte	2
-	.byte	TOK_EQ
-	.byte	TOK_CJUMP
-	.word	jump_lbl_342
-@FastBasic_LINE_669:  ; LINE 669
-	.byte	TOK_VAR_LOAD
-	.byte	46
-	.byte	TOK_PUSH_1
-	.byte	TOK_ADD
-	.byte	TOK_PEEK
-	.byte	TOK_PUSH_VAR_LOAD
-	.byte	46
-	.byte	TOK_PUSH_1
-	.byte	TOK_SUB
-	.byte	TOK_DPEEK
-	.byte	TOK_PUSH_VAR_LOAD
-	.byte	46
-	.byte	TOK_PUSH_BYTE
-	.byte	40
-	.byte	TOK_ADD
-	.byte	TOK_PEEK
-	.byte	TOK_BIT_OR
-	.byte	TOK_ADD
-	.byte	TOK_VAR_STORE
-	.byte	49
-@FastBasic_LINE_670:  ; LINE 670
-	.byte	TOK_RET
 jump_lbl_342:
 	.byte	TOK_VAR_LOAD
 	.byte	26
@@ -6340,7 +6340,7 @@ jump_lbl_342:
 	.byte	3
 	.byte	TOK_EQ
 	.byte	TOK_CRET
-@FastBasic_LINE_671:  ; LINE 671
+@FastBasic_LINE_669:  ; LINE 669
 	.byte	TOK_VAR_LOAD
 	.byte	46
 	.byte	TOK_PUSH_BYTE
@@ -6362,18 +6362,18 @@ jump_lbl_342:
 	.byte	TOK_ADD
 	.byte	TOK_VAR_STORE
 	.byte	49
-@FastBasic_LINE_673:  ; LINE 673
+@FastBasic_LINE_671:  ; LINE 671
 	.byte	TOK_RET
-@FastBasic_LINE_675:  ; LINE 675
+@FastBasic_LINE_673:  ; LINE 673
 proc_lbl_CHECK_PIECE_4:
-@FastBasic_LINE_676:  ; LINE 676
+@FastBasic_LINE_674:  ; LINE 674
 	.byte	TOK_VAR_LOAD
 	.byte	26
 	.byte	TOK_COMP_0
 	.byte	TOK_L_NOT
 	.byte	TOK_CJUMP
 	.word	jump_lbl_347
-@FastBasic_LINE_677:  ; LINE 677
+@FastBasic_LINE_675:  ; LINE 675
 	.byte	TOK_VAR_LOAD
 	.byte	46
 	.byte	TOK_PEEK
@@ -6393,7 +6393,7 @@ proc_lbl_CHECK_PIECE_4:
 	.byte	TOK_ADD
 	.byte	TOK_VAR_STORE
 	.byte	49
-@FastBasic_LINE_678:  ; LINE 678
+@FastBasic_LINE_676:  ; LINE 676
 	.byte	TOK_RET
 jump_lbl_347:
 	.byte	TOK_VAR_LOAD
@@ -6402,7 +6402,7 @@ jump_lbl_347:
 	.byte	TOK_EQ
 	.byte	TOK_CJUMP
 	.word	jump_lbl_349
-@FastBasic_LINE_679:  ; LINE 679
+@FastBasic_LINE_677:  ; LINE 677
 	.byte	TOK_VAR_LOAD
 	.byte	46
 	.byte	TOK_DPEEK
@@ -6422,7 +6422,7 @@ jump_lbl_347:
 	.byte	TOK_BIT_OR
 	.byte	TOK_VAR_STORE
 	.byte	49
-@FastBasic_LINE_680:  ; LINE 680
+@FastBasic_LINE_678:  ; LINE 678
 	.byte	TOK_RET
 jump_lbl_349:
 	.byte	TOK_VAR_LOAD
@@ -6432,7 +6432,7 @@ jump_lbl_349:
 	.byte	TOK_EQ
 	.byte	TOK_CJUMP
 	.word	jump_lbl_351
-@FastBasic_LINE_681:  ; LINE 681
+@FastBasic_LINE_679:  ; LINE 679
 	.byte	TOK_VAR_LOAD
 	.byte	46
 	.byte	TOK_PEEK
@@ -6452,7 +6452,7 @@ jump_lbl_349:
 	.byte	TOK_ADD
 	.byte	TOK_VAR_STORE
 	.byte	49
-@FastBasic_LINE_682:  ; LINE 682
+@FastBasic_LINE_680:  ; LINE 680
 	.byte	TOK_RET
 jump_lbl_351:
 	.byte	TOK_VAR_LOAD
@@ -6461,7 +6461,7 @@ jump_lbl_351:
 	.byte	3
 	.byte	TOK_EQ
 	.byte	TOK_CRET
-@FastBasic_LINE_683:  ; LINE 683
+@FastBasic_LINE_681:  ; LINE 681
 	.byte	TOK_VAR_LOAD
 	.byte	46
 	.byte	TOK_DPEEK
@@ -6481,18 +6481,18 @@ jump_lbl_351:
 	.byte	TOK_BIT_OR
 	.byte	TOK_VAR_STORE
 	.byte	49
-@FastBasic_LINE_685:  ; LINE 685
+@FastBasic_LINE_683:  ; LINE 683
 	.byte	TOK_RET
-@FastBasic_LINE_687:  ; LINE 687
+@FastBasic_LINE_685:  ; LINE 685
 proc_lbl_CHECK_PIECE_5:
-@FastBasic_LINE_688:  ; LINE 688
+@FastBasic_LINE_686:  ; LINE 686
 	.byte	TOK_VAR_LOAD
 	.byte	26
 	.byte	TOK_COMP_0
 	.byte	TOK_L_NOT
 	.byte	TOK_CJUMP
 	.word	jump_lbl_356
-@FastBasic_LINE_689:  ; LINE 689
+@FastBasic_LINE_687:  ; LINE 687
 	.byte	TOK_VAR_LOAD
 	.byte	46
 	.byte	TOK_PUSH_1
@@ -6511,7 +6511,7 @@ proc_lbl_CHECK_PIECE_5:
 	.byte	TOK_BIT_OR
 	.byte	TOK_VAR_STORE
 	.byte	49
-@FastBasic_LINE_690:  ; LINE 690
+@FastBasic_LINE_688:  ; LINE 688
 	.byte	TOK_RET
 jump_lbl_356:
 	.byte	TOK_VAR_LOAD
@@ -6520,7 +6520,7 @@ jump_lbl_356:
 	.byte	TOK_EQ
 	.byte	TOK_CJUMP
 	.word	jump_lbl_358
-@FastBasic_LINE_691:  ; LINE 691
+@FastBasic_LINE_689:  ; LINE 689
 	.byte	TOK_VAR_LOAD
 	.byte	46
 	.byte	TOK_PUSH_BYTE
@@ -6540,7 +6540,7 @@ jump_lbl_356:
 	.byte	TOK_BIT_OR
 	.byte	TOK_VAR_STORE
 	.byte	49
-@FastBasic_LINE_692:  ; LINE 692
+@FastBasic_LINE_690:  ; LINE 690
 	.byte	TOK_RET
 jump_lbl_358:
 	.byte	TOK_VAR_LOAD
@@ -6550,7 +6550,7 @@ jump_lbl_358:
 	.byte	TOK_EQ
 	.byte	TOK_CJUMP
 	.word	jump_lbl_360
-@FastBasic_LINE_693:  ; LINE 693
+@FastBasic_LINE_691:  ; LINE 691
 	.byte	TOK_VAR_LOAD
 	.byte	46
 	.byte	TOK_PUSH_BYTE
@@ -6571,7 +6571,7 @@ jump_lbl_358:
 	.byte	TOK_ADD
 	.byte	TOK_VAR_STORE
 	.byte	49
-@FastBasic_LINE_694:  ; LINE 694
+@FastBasic_LINE_692:  ; LINE 692
 	.byte	TOK_RET
 jump_lbl_360:
 	.byte	TOK_VAR_LOAD
@@ -6580,7 +6580,7 @@ jump_lbl_360:
 	.byte	3
 	.byte	TOK_EQ
 	.byte	TOK_CRET
-@FastBasic_LINE_695:  ; LINE 695
+@FastBasic_LINE_693:  ; LINE 693
 	.byte	TOK_VAR_LOAD
 	.byte	46
 	.byte	TOK_PUSH_BYTE
@@ -6600,18 +6600,18 @@ jump_lbl_360:
 	.byte	TOK_ADD
 	.byte	TOK_VAR_STORE
 	.byte	49
-@FastBasic_LINE_697:  ; LINE 697
+@FastBasic_LINE_695:  ; LINE 695
 	.byte	TOK_RET
-@FastBasic_LINE_699:  ; LINE 699
+@FastBasic_LINE_697:  ; LINE 697
 proc_lbl_CHECK_PIECE_6:
-@FastBasic_LINE_700:  ; LINE 700
+@FastBasic_LINE_698:  ; LINE 698
 	.byte	TOK_VAR_LOAD
 	.byte	26
 	.byte	TOK_COMP_0
 	.byte	TOK_L_NOT
 	.byte	TOK_CJUMP
 	.word	jump_lbl_365
-@FastBasic_LINE_701:  ; LINE 701
+@FastBasic_LINE_699:  ; LINE 699
 	.byte	TOK_VAR_LOAD
 	.byte	46
 	.byte	TOK_PUSH_1
@@ -6630,7 +6630,7 @@ proc_lbl_CHECK_PIECE_6:
 	.byte	TOK_ADD
 	.byte	TOK_VAR_STORE
 	.byte	49
-@FastBasic_LINE_702:  ; LINE 702
+@FastBasic_LINE_700:  ; LINE 700
 	.byte	TOK_RET
 jump_lbl_365:
 	.byte	TOK_VAR_LOAD
@@ -6639,7 +6639,7 @@ jump_lbl_365:
 	.byte	TOK_EQ
 	.byte	TOK_CJUMP
 	.word	jump_lbl_367
-@FastBasic_LINE_703:  ; LINE 703
+@FastBasic_LINE_701:  ; LINE 701
 	.byte	TOK_VAR_LOAD
 	.byte	46
 	.byte	TOK_PUSH_BYTE
@@ -6659,7 +6659,7 @@ jump_lbl_365:
 	.byte	TOK_BIT_OR
 	.byte	TOK_VAR_STORE
 	.byte	49
-@FastBasic_LINE_704:  ; LINE 704
+@FastBasic_LINE_702:  ; LINE 702
 	.byte	TOK_RET
 jump_lbl_367:
 	.byte	TOK_VAR_LOAD
@@ -6669,7 +6669,7 @@ jump_lbl_367:
 	.byte	TOK_EQ
 	.byte	TOK_CJUMP
 	.word	jump_lbl_369
-@FastBasic_LINE_705:  ; LINE 705
+@FastBasic_LINE_703:  ; LINE 703
 	.byte	TOK_VAR_LOAD
 	.byte	46
 	.byte	TOK_PUSH_BYTE
@@ -6690,7 +6690,7 @@ jump_lbl_367:
 	.byte	TOK_ADD
 	.byte	TOK_VAR_STORE
 	.byte	49
-@FastBasic_LINE_706:  ; LINE 706
+@FastBasic_LINE_704:  ; LINE 704
 	.byte	TOK_RET
 jump_lbl_369:
 	.byte	TOK_VAR_LOAD
@@ -6699,7 +6699,7 @@ jump_lbl_369:
 	.byte	3
 	.byte	TOK_EQ
 	.byte	TOK_CRET
-@FastBasic_LINE_707:  ; LINE 707
+@FastBasic_LINE_705:  ; LINE 705
 	.byte	TOK_VAR_LOAD
 	.byte	46
 	.byte	TOK_PUSH_BYTE
@@ -6719,11 +6719,11 @@ jump_lbl_369:
 	.byte	TOK_ADD
 	.byte	TOK_VAR_STORE
 	.byte	49
-@FastBasic_LINE_709:  ; LINE 709
+@FastBasic_LINE_707:  ; LINE 707
 	.byte	TOK_RET
-@FastBasic_LINE_711:  ; LINE 711
+@FastBasic_LINE_709:  ; LINE 709
 proc_lbl_CHECK_PIECE_7:
-@FastBasic_LINE_712:  ; LINE 712
+@FastBasic_LINE_710:  ; LINE 710
 	.byte	TOK_VAR_LOAD
 	.byte	46
 	.byte	TOK_PEEK
@@ -6749,11 +6749,11 @@ proc_lbl_CHECK_PIECE_7:
 	.byte	TOK_BIT_OR
 	.byte	TOK_VAR_STORE
 	.byte	49
-@FastBasic_LINE_713:  ; LINE 713
+@FastBasic_LINE_711:  ; LINE 711
 	.byte	TOK_RET
-@FastBasic_LINE_715:  ; LINE 715
+@FastBasic_LINE_713:  ; LINE 713
 proc_lbl_TITLE_SCREEN:
-@FastBasic_LINE_716:  ; LINE 716
+@FastBasic_LINE_714:  ; LINE 714
 	.byte	TOK_0
 	.byte	TOK_PMGRAPHICS
 	.byte	TOK_BYTE
@@ -6761,7 +6761,7 @@ proc_lbl_TITLE_SCREEN:
 	.byte	TOK_CLOSE
 	.byte	TOK_0
 	.byte	TOK_GRAPHICS
-@FastBasic_LINE_717:  ; LINE 717
+@FastBasic_LINE_715:  ; LINE 715
 	.byte	TOK_VAR_SADDR
 	.byte	29
 	.byte	TOK_VAR_ADDR
@@ -6778,12 +6778,12 @@ proc_lbl_TITLE_SCREEN:
 	.byte	TOK_FP_INT
 	.byte	TOK_INT_FP
 	.byte	TOK_FP_STORE
-@FastBasic_LINE_718:  ; LINE 718
+@FastBasic_LINE_716:  ; LINE 716
 	.byte	TOK_BYTE_SADDR
 	.byte	82
 	.byte	TOK_0
 	.byte	TOK_POKE
-@FastBasic_LINE_719:  ; LINE 719
+@FastBasic_LINE_717:  ; LINE 717
 	.byte	TOK_NUM
 	.word	710
 	.byte	TOK_SADDR
@@ -6802,7 +6802,7 @@ proc_lbl_TITLE_SCREEN:
 	.byte	TOK_BYTE
 	.byte	32
 	.byte	TOK_POKE
-@FastBasic_LINE_720:  ; LINE 720
+@FastBasic_LINE_718:  ; LINE 718
 	.byte	TOK_BYTE_SADDR
 	.byte	COLCRS
 	.byte	TOK_0
@@ -6812,29 +6812,29 @@ proc_lbl_TITLE_SCREEN:
 	.byte	TOK_BYTE
 	.byte	3
 	.byte	TOK_POKE
-@FastBasic_LINE_721:  ; LINE 721
+@FastBasic_LINE_719:  ; LINE 719
 	.byte	TOK_CSTRING
 	.byte	24, "             T E T R I S"
 	.byte	TOK_PRINT_STR
 	.byte	TOK_PRINT_EOL
-@FastBasic_LINE_722:  ; LINE 722
+@FastBasic_LINE_720:  ; LINE 720
 	.byte	TOK_PRINT_EOL
-@FastBasic_LINE_723:  ; LINE 723
+@FastBasic_LINE_721:  ; LINE 721
 	.byte	TOK_CSTRING
 	.byte	39, "             DEVELOPER: ALEXEY PAJITNOV"
 	.byte	TOK_PRINT_STR
 	.byte	TOK_PRINT_EOL
-@FastBasic_LINE_724:  ; LINE 724
+@FastBasic_LINE_722:  ; LINE 722
 	.byte	TOK_CSTRING
 	.byte	38, " FAST BASIC CONVERSION: PETER J. MEYER"
 	.byte	TOK_PRINT_STR
 	.byte	TOK_PRINT_EOL
-@FastBasic_LINE_725:  ; LINE 725
+@FastBasic_LINE_723:  ; LINE 723
 	.byte	TOK_CSTRING
 	.byte	35, "ORIGINAL BASIC VERSION: DAVID MASON"
 	.byte	TOK_PRINT_STR
 	.byte	TOK_PRINT_EOL
-@FastBasic_LINE_727:  ; LINE 727
+@FastBasic_LINE_725:  ; LINE 725
 	.byte	TOK_VAR_ADDR
 	.byte	41
 	.byte	TOK_FP_LOAD
@@ -6852,7 +6852,7 @@ proc_lbl_TITLE_SCREEN:
 	.byte	TOK_FP_LOAD
 	.byte	TOK_FP_STORE
 jump_lbl_376:
-@FastBasic_LINE_728:  ; LINE 728
+@FastBasic_LINE_726:  ; LINE 726
 	.byte	TOK_VAR_LOAD
 	.byte	14
 	.byte	TOK_PUSH_VAR_LOAD
@@ -6888,7 +6888,7 @@ jump_lbl_376:
 	.byte	TOK_VAR_STORE
 	.byte	15
 jump_lbl_377:
-@FastBasic_LINE_729:  ; LINE 729
+@FastBasic_LINE_727:  ; LINE 727
 	.byte	TOK_VAR_ADDR
 	.byte	29
 	.byte	TOK_FP_LOAD
@@ -6906,7 +6906,7 @@ jump_lbl_377:
 	.byte	TOK_VAR_STORE
 	.byte	4
 jump_lbl_378:
-@FastBasic_LINE_730:  ; LINE 730
+@FastBasic_LINE_728:  ; LINE 728
 	.byte	TOK_BYTE_SADDR
 	.byte	COLCRS
 	.byte	TOK_0
@@ -6916,7 +6916,7 @@ jump_lbl_378:
 	.byte	TOK_BYTE
 	.byte	10
 	.byte	TOK_POKE
-@FastBasic_LINE_731:  ; LINE 731
+@FastBasic_LINE_729:  ; LINE 729
 	.byte	TOK_PRINT_TAB
 	.byte	TOK_CSTRING
 	.byte	4, "LAST"
@@ -6926,7 +6926,7 @@ jump_lbl_378:
 	.byte	7, "HIGHEST"
 	.byte	TOK_PRINT_STR
 	.byte	TOK_PRINT_EOL
-@FastBasic_LINE_732:  ; LINE 732
+@FastBasic_LINE_730:  ; LINE 730
 	.byte	TOK_CSTRING
 	.byte	6, "SCORE:"
 	.byte	TOK_PRINT_STR
@@ -6943,7 +6943,7 @@ jump_lbl_378:
 	.byte	TOK_FP_STR
 	.byte	TOK_PRINT_STR
 	.byte	TOK_PRINT_EOL
-@FastBasic_LINE_733:  ; LINE 733
+@FastBasic_LINE_731:  ; LINE 731
 	.byte	TOK_CSTRING
 	.byte	6, "LINES:"
 	.byte	TOK_PRINT_STR
@@ -6958,7 +6958,7 @@ jump_lbl_378:
 	.byte	TOK_INT_STR
 	.byte	TOK_PRINT_STR
 	.byte	TOK_PRINT_EOL
-@FastBasic_LINE_734:  ; LINE 734
+@FastBasic_LINE_732:  ; LINE 732
 	.byte	TOK_BYTE_SADDR
 	.byte	COLCRS
 	.byte	TOK_BYTE
@@ -6969,7 +6969,7 @@ jump_lbl_378:
 	.byte	TOK_BYTE
 	.byte	16
 	.byte	TOK_POKE
-@FastBasic_LINE_735:  ; LINE 735
+@FastBasic_LINE_733:  ; LINE 733
 	.byte	TOK_CSTRING
 	.byte	13, "SELECT LEVEL:"
 	.byte	TOK_PRINT_STR
@@ -6982,7 +6982,7 @@ jump_lbl_378:
 	.byte	3, "   "
 	.byte	TOK_PRINT_STR
 	.byte	TOK_PRINT_EOL
-@FastBasic_LINE_736:  ; LINE 736
+@FastBasic_LINE_734:  ; LINE 734
 	.byte	TOK_BYTE_SADDR
 	.byte	COLCRS
 	.byte	TOK_BYTE
@@ -6993,11 +6993,11 @@ jump_lbl_378:
 	.byte	TOK_BYTE
 	.byte	16
 	.byte	TOK_POKE
-@FastBasic_LINE_737:  ; LINE 737
+@FastBasic_LINE_735:  ; LINE 735
 	.byte	TOK_CSTRING
-	.byte	17, "OPTION GAME_TYPE:"
+	.byte	12, "OPTION TYPE:"
 	.byte	TOK_PRINT_STR
-@FastBasic_LINE_738:  ; LINE 738
+@FastBasic_LINE_736:  ; LINE 736
 	.byte	TOK_VAR_LOAD
 	.byte	5
 	.byte	TOK_PUSH_1
@@ -7009,7 +7009,7 @@ jump_lbl_378:
 	.byte	TOK_PRINT_STR
 	.byte	TOK_PRINT_EOL
 jump_lbl_379:
-@FastBasic_LINE_739:  ; LINE 739
+@FastBasic_LINE_737:  ; LINE 737
 	.byte	TOK_VAR_LOAD
 	.byte	5
 	.byte	TOK_PUSH_BYTE
@@ -7044,7 +7044,7 @@ jump_lbl_380:
 	.byte	2, "  "
 	.byte	TOK_PRINT_STR
 	.byte	TOK_PRINT_EOL
-@FastBasic_LINE_740:  ; LINE 740
+@FastBasic_LINE_738:  ; LINE 738
 	.byte	TOK_VAR_LOAD
 	.byte	5
 	.byte	TOK_PUSH_BYTE
@@ -7061,7 +7061,7 @@ jump_lbl_381:
 	.byte	10
 	.byte	TOK_VAR_STORE
 	.byte	16
-@FastBasic_LINE_741:  ; LINE 741
+@FastBasic_LINE_739:  ; LINE 739
 	.byte	TOK_VAR_LOAD
 	.byte	5
 	.byte	TOK_PUSH_BYTE
@@ -7078,7 +7078,7 @@ jump_lbl_382:
 	.byte	5
 	.byte	TOK_VAR_STORE
 	.byte	16
-@FastBasic_LINE_742:  ; LINE 742
+@FastBasic_LINE_740:  ; LINE 740
 	.byte	TOK_VAR_LOAD
 	.byte	5
 	.byte	TOK_PUSH_BYTE
@@ -7113,7 +7113,7 @@ jump_lbl_383:
 	.byte	2, "  "
 	.byte	TOK_PRINT_STR
 	.byte	TOK_PRINT_EOL
-@FastBasic_LINE_743:  ; LINE 743
+@FastBasic_LINE_741:  ; LINE 741
 	.byte	TOK_VAR_LOAD
 	.byte	5
 	.byte	TOK_PUSH_BYTE
@@ -7148,7 +7148,7 @@ jump_lbl_384:
 	.byte	2, "  "
 	.byte	TOK_PRINT_STR
 	.byte	TOK_PRINT_EOL
-@FastBasic_LINE_744:  ; LINE 744
+@FastBasic_LINE_742:  ; LINE 742
 	.byte	TOK_VAR_LOAD
 	.byte	5
 	.byte	TOK_PUSH_BYTE
@@ -7183,7 +7183,7 @@ jump_lbl_385:
 	.byte	2, "  "
 	.byte	TOK_PRINT_STR
 	.byte	TOK_PRINT_EOL
-@FastBasic_LINE_745:  ; LINE 745
+@FastBasic_LINE_743:  ; LINE 743
 	.byte	TOK_BYTE_SADDR
 	.byte	COLCRS
 	.byte	TOK_BYTE
@@ -7194,7 +7194,7 @@ jump_lbl_385:
 	.byte	TOK_BYTE
 	.byte	21
 	.byte	TOK_POKE
-@FastBasic_LINE_746:  ; LINE 746
+@FastBasic_LINE_744:  ; LINE 744
 	.byte	TOK_VAR_LOAD
 	.byte	3
 	.byte	TOK_PUSH_VAR_LOAD
@@ -7203,7 +7203,7 @@ jump_lbl_385:
 	.byte	TOK_ADD
 	.byte	TOK_DPEEK
 	.byte	TOK_PRINT_STR
-@FastBasic_LINE_747:  ; LINE 747
+@FastBasic_LINE_745:  ; LINE 745
 	.byte	TOK_BYTE_SADDR
 	.byte	COLCRS
 	.byte	TOK_0
@@ -7212,9 +7212,9 @@ jump_lbl_385:
 	.byte	ROWCRS
 	.byte	TOK_0
 	.byte	TOK_POKE
-@FastBasic_LINE_749:  ; LINE 749
+@FastBasic_LINE_747:  ; LINE 747
 jump_lbl_387:
-@FastBasic_LINE_750:  ; LINE 750
+@FastBasic_LINE_748:  ; LINE 748
 	.byte	TOK_NUM
 	.word	53279
 	.byte	TOK_PEEK
@@ -7223,7 +7223,7 @@ jump_lbl_387:
 	.byte	TOK_BIT_AND
 	.byte	TOK_VAR_STORE
 	.byte	47
-@FastBasic_LINE_751:  ; LINE 751
+@FastBasic_LINE_749:  ; LINE 749
 	.byte	TOK_VAR_LOAD
 	.byte	47
 	.byte	TOK_PUSH_BYTE
@@ -7262,7 +7262,7 @@ jump_lbl_387:
 	.byte	TOK_L_OR
 	.byte	TOK_CJUMP
 	.word	jump_lbl_387
-@FastBasic_LINE_752:  ; LINE 752
+@FastBasic_LINE_750:  ; LINE 750
 	.byte	TOK_VAR_LOAD
 	.byte	47
 	.byte	TOK_PUSH_BYTE
@@ -7272,7 +7272,7 @@ jump_lbl_387:
 	.byte	TOK_L_NOT
 	.byte	TOK_CJUMP
 	.word	jump_lbl_388
-@FastBasic_LINE_753:  ; LINE 753
+@FastBasic_LINE_751:  ; LINE 751
 	.byte	TOK_VAR_SADDR
 	.byte	29
 	.byte	TOK_VAR_ADDR
@@ -7282,7 +7282,7 @@ jump_lbl_387:
 	.byte	$40, $01, $00, $00, $00, $00
 	.byte	TOK_FP_ADD
 	.byte	TOK_FP_STORE
-@FastBasic_LINE_754:  ; LINE 754
+@FastBasic_LINE_752:  ; LINE 752
 	.byte	TOK_VAR_ADDR
 	.byte	29
 	.byte	TOK_FP_LOAD
@@ -7299,9 +7299,9 @@ jump_lbl_387:
 	.byte	TOK_FLOAT
 	.byte	$00, $00, $00, $00, $00, $00
 	.byte	TOK_FP_STORE
-@FastBasic_LINE_755:  ; LINE 755
+@FastBasic_LINE_753:  ; LINE 753
 jump_lbl_388:
-@FastBasic_LINE_756:  ; LINE 756
+@FastBasic_LINE_754:  ; LINE 754
 	.byte	TOK_VAR_LOAD
 	.byte	47
 	.byte	TOK_PUSH_BYTE
@@ -7321,7 +7321,7 @@ jump_lbl_388:
 	.byte	TOK_VAR_STORE
 	.byte	5
 jump_lbl_390:
-@FastBasic_LINE_757:  ; LINE 757
+@FastBasic_LINE_755:  ; LINE 755
 	.byte	TOK_BYTE_SADDR
 	.byte	COLCRS
 	.byte	TOK_BYTE
@@ -7332,7 +7332,7 @@ jump_lbl_390:
 	.byte	TOK_BYTE
 	.byte	21
 	.byte	TOK_POKE
-@FastBasic_LINE_758:  ; LINE 758
+@FastBasic_LINE_756:  ; LINE 756
 	.byte	TOK_VAR_LOAD
 	.byte	3
 	.byte	TOK_PUSH_VAR_LOAD
@@ -7341,7 +7341,7 @@ jump_lbl_390:
 	.byte	TOK_ADD
 	.byte	TOK_DPEEK
 	.byte	TOK_PRINT_STR
-@FastBasic_LINE_759:  ; LINE 759
+@FastBasic_LINE_757:  ; LINE 757
 	.byte	TOK_BYTE_SADDR
 	.byte	COLCRS
 	.byte	TOK_BYTE
@@ -7352,7 +7352,7 @@ jump_lbl_390:
 	.byte	TOK_BYTE
 	.byte	16
 	.byte	TOK_POKE
-@FastBasic_LINE_760:  ; LINE 760
+@FastBasic_LINE_758:  ; LINE 758
 	.byte	TOK_CSTRING
 	.byte	13, "SELECT LEVEL:"
 	.byte	TOK_PRINT_STR
@@ -7365,7 +7365,7 @@ jump_lbl_390:
 	.byte	3, "   "
 	.byte	TOK_PRINT_STR
 	.byte	TOK_PRINT_EOL
-@FastBasic_LINE_761:  ; LINE 761
+@FastBasic_LINE_759:  ; LINE 759
 	.byte	TOK_BYTE_SADDR
 	.byte	COLCRS
 	.byte	TOK_BYTE
@@ -7376,11 +7376,11 @@ jump_lbl_390:
 	.byte	TOK_BYTE
 	.byte	16
 	.byte	TOK_POKE
-@FastBasic_LINE_762:  ; LINE 762
+@FastBasic_LINE_760:  ; LINE 760
 	.byte	TOK_CSTRING
 	.byte	17, "OPTION GAME_TYPE:"
 	.byte	TOK_PRINT_STR
-@FastBasic_LINE_763:  ; LINE 763
+@FastBasic_LINE_761:  ; LINE 761
 	.byte	TOK_VAR_LOAD
 	.byte	5
 	.byte	TOK_PUSH_1
@@ -7395,7 +7395,7 @@ jump_lbl_391:
 	.byte	TOK_0
 	.byte	TOK_VAR_STORE
 	.byte	14
-@FastBasic_LINE_764:  ; LINE 764
+@FastBasic_LINE_762:  ; LINE 762
 	.byte	TOK_VAR_LOAD
 	.byte	5
 	.byte	TOK_PUSH_BYTE
@@ -7412,7 +7412,7 @@ jump_lbl_392:
 	.byte	25
 	.byte	TOK_VAR_STORE
 	.byte	14
-@FastBasic_LINE_765:  ; LINE 765
+@FastBasic_LINE_763:  ; LINE 763
 	.byte	TOK_VAR_LOAD
 	.byte	5
 	.byte	TOK_PUSH_BYTE
@@ -7432,7 +7432,7 @@ jump_lbl_393:
 	.byte	10
 	.byte	TOK_VAR_STORE
 	.byte	16
-@FastBasic_LINE_766:  ; LINE 766
+@FastBasic_LINE_764:  ; LINE 764
 	.byte	TOK_VAR_LOAD
 	.byte	5
 	.byte	TOK_PUSH_BYTE
@@ -7452,7 +7452,7 @@ jump_lbl_394:
 	.byte	4
 	.byte	TOK_VAR_STORE
 	.byte	16
-@FastBasic_LINE_767:  ; LINE 767
+@FastBasic_LINE_765:  ; LINE 765
 	.byte	TOK_VAR_LOAD
 	.byte	5
 	.byte	TOK_PUSH_BYTE
@@ -7469,7 +7469,7 @@ jump_lbl_395:
 	.byte	50
 	.byte	TOK_VAR_STORE
 	.byte	14
-@FastBasic_LINE_768:  ; LINE 768
+@FastBasic_LINE_766:  ; LINE 766
 	.byte	TOK_VAR_LOAD
 	.byte	5
 	.byte	TOK_PUSH_BYTE
@@ -7486,7 +7486,7 @@ jump_lbl_396:
 	.byte	100
 	.byte	TOK_VAR_STORE
 	.byte	14
-@FastBasic_LINE_769:  ; LINE 769
+@FastBasic_LINE_767:  ; LINE 767
 	.byte	TOK_VAR_LOAD
 	.byte	5
 	.byte	TOK_PUSH_BYTE
@@ -7502,7 +7502,7 @@ jump_lbl_397:
 	.byte	TOK_0
 	.byte	TOK_VAR_STORE
 	.byte	14
-@FastBasic_LINE_770:  ; LINE 770
+@FastBasic_LINE_768:  ; LINE 768
 	.byte	TOK_VAR_LOAD
 	.byte	5
 	.byte	TOK_PUSH_BYTE
@@ -7528,7 +7528,7 @@ jump_lbl_397:
 	.byte	TOK_L_OR
 	.byte	TOK_CJUMP
 	.word	jump_lbl_398
-@FastBasic_LINE_771:  ; LINE 771
+@FastBasic_LINE_769:  ; LINE 769
 	.byte	TOK_NUM
 	.word	732
 	.byte	TOK_PEEK
@@ -7537,7 +7537,7 @@ jump_lbl_397:
 	.byte	TOK_EQ
 	.byte	TOK_CJUMP
 	.word	jump_lbl_399
-@FastBasic_LINE_772:  ; LINE 772
+@FastBasic_LINE_770:  ; LINE 770
 	.byte	TOK_VAR_SADDR
 	.byte	19
 	.byte	TOK_VAR_ADDR
@@ -7547,15 +7547,15 @@ jump_lbl_397:
 	.byte	$40, $01, $00, $00, $00, $00
 	.byte	TOK_FP_ADD
 	.byte	TOK_FP_STORE
-@FastBasic_LINE_773:  ; LINE 773
+@FastBasic_LINE_771:  ; LINE 771
 jump_lbl_400:
-@FastBasic_LINE_774:  ; LINE 774
+@FastBasic_LINE_772:  ; LINE 772
 	.byte	TOK_NUM
 	.word	732
 	.byte	TOK_SADDR
 	.byte	TOK_0
 	.byte	TOK_POKE
-@FastBasic_LINE_775:  ; LINE 775
+@FastBasic_LINE_773:  ; LINE 773
 	.byte	TOK_NUM
 	.word	732
 	.byte	TOK_PEEK
@@ -7563,7 +7563,7 @@ jump_lbl_400:
 	.byte	TOK_L_NOT
 	.byte	TOK_CJUMP
 	.word	jump_lbl_400
-@FastBasic_LINE_776:  ; LINE 776
+@FastBasic_LINE_774:  ; LINE 774
 	.byte	TOK_VAR_ADDR
 	.byte	19
 	.byte	TOK_FP_LOAD
@@ -7578,9 +7578,9 @@ jump_lbl_400:
 	.byte	TOK_FLOAT
 	.byte	$00, $00, $00, $00, $00, $00
 	.byte	TOK_FP_STORE
-@FastBasic_LINE_777:  ; LINE 777
+@FastBasic_LINE_775:  ; LINE 775
 jump_lbl_399:
-@FastBasic_LINE_778:  ; LINE 778
+@FastBasic_LINE_776:  ; LINE 776
 	.byte	TOK_BYTE_SADDR
 	.byte	COLCRS
 	.byte	TOK_BYTE
@@ -7603,11 +7603,11 @@ jump_lbl_399:
 	.byte	2, "  "
 	.byte	TOK_PRINT_STR
 	.byte	TOK_PRINT_EOL
-@FastBasic_LINE_779:  ; LINE 779
+@FastBasic_LINE_777:  ; LINE 777
 	.byte	TOK_JUMP
 	.word	jump_lbl_402
 jump_lbl_398:
-@FastBasic_LINE_780:  ; LINE 780
+@FastBasic_LINE_778:  ; LINE 778
 	.byte	TOK_BYTE_SADDR
 	.byte	COLCRS
 	.byte	TOK_BYTE
@@ -7622,26 +7622,32 @@ jump_lbl_398:
 	.byte	15, "               "
 	.byte	TOK_PRINT_STR
 	.byte	TOK_PRINT_EOL
-@FastBasic_LINE_781:  ; LINE 781
+@FastBasic_LINE_779:  ; LINE 779
 jump_lbl_402:
-@FastBasic_LINE_782:  ; LINE 782
+@FastBasic_LINE_780:  ; LINE 780
 	.byte	TOK_BYTE
 	.byte	5
 	.byte	TOK_PAUSE
-@FastBasic_LINE_783:  ; LINE 783
-	.byte	TOK_VAR_LOAD
+@FastBasic_LINE_781:  ; LINE 781
+	.byte	TOK_NUM
+	.word	644
+	.byte	TOK_PEEK
+	.byte	TOK_COMP_0
+	.byte	TOK_L_NOT
+	.byte	TOK_PUSH_VAR_LOAD
 	.byte	47
 	.byte	TOK_PUSH_1
 	.byte	TOK_BIT_AND
 	.byte	TOK_COMP_0
 	.byte	TOK_L_NOT
+	.byte	TOK_L_OR
 	.byte	TOK_CJUMP
 	.word	jump_lbl_387
-@FastBasic_LINE_784:  ; LINE 784
+@FastBasic_LINE_782:  ; LINE 782
 	.byte	TOK_RET
-@FastBasic_LINE_786:  ; LINE 786
-proc_lbl_S_4000:
-@FastBasic_LINE_787:  ; LINE 787
+@FastBasic_LINE_784:  ; LINE 784
+proc_lbl_PUT_RANDOM_SQUARES:
+@FastBasic_LINE_785:  ; LINE 785
 	.byte	TOK_VAR_ADDR
 	.byte	19
 	.byte	TOK_FP_LOAD
@@ -7657,7 +7663,7 @@ proc_lbl_S_4000:
 	.byte	$40, $06, $50, $00, $00, $00
 	.byte	TOK_FP_STORE
 jump_lbl_405:
-@FastBasic_LINE_788:  ; LINE 788
+@FastBasic_LINE_786:  ; LINE 786
 	.byte	TOK_VAR_LOAD
 	.byte	35
 	.byte	TOK_PUSH_BYTE
@@ -7701,7 +7707,7 @@ jump_lbl_406:
 	.byte	TOK_ADD
 	.byte	TOK_VAR_STORE
 	.byte	51
-@FastBasic_LINE_789:  ; LINE 789
+@FastBasic_LINE_787:  ; LINE 787
 	.byte	TOK_VAR_SADDR
 	.byte	17
 	.byte	TOK_PUSH_BYTE
@@ -7725,7 +7731,7 @@ jump_lbl_406:
 	.byte	TOK_CJUMP
 	.word	jump_lbl_407
 jump_lbl_408:
-@FastBasic_LINE_790:  ; LINE 790
+@FastBasic_LINE_788:  ; LINE 788
 	.byte	TOK_VAR_SADDR
 	.byte	18
 	.byte	TOK_PUSH_0
@@ -7738,7 +7744,7 @@ jump_lbl_408:
 	.byte	TOK_CJUMP
 	.word	jump_lbl_409
 jump_lbl_410:
-@FastBasic_LINE_791:  ; LINE 791
+@FastBasic_LINE_789:  ; LINE 789
 	.byte	TOK_BYTE_SADDR
 	.byte	COLOR
 	.byte	TOK_BYTE
@@ -7764,19 +7770,19 @@ jump_lbl_410:
 	.byte	TOK_FP_INT
 	.byte	TOK_POKE
 	.byte	TOK_PLOT
-@FastBasic_LINE_792:  ; LINE 792
+@FastBasic_LINE_790:  ; LINE 790
 	.byte	TOK_FOR_NEXT
 	.byte	TOK_CJUMP
 	.word	jump_lbl_410
 jump_lbl_409:
 	.byte	TOK_FOR_EXIT
-@FastBasic_LINE_793:  ; LINE 793
+@FastBasic_LINE_791:  ; LINE 791
 	.byte	TOK_FOR_NEXT
 	.byte	TOK_CJUMP
 	.word	jump_lbl_408
 jump_lbl_407:
 	.byte	TOK_FOR_EXIT
-@FastBasic_LINE_794:  ; LINE 794
+@FastBasic_LINE_792:  ; LINE 792
 	.byte	TOK_VAR_SADDR
 	.byte	41
 	.byte	TOK_VAR_ADDR
@@ -7793,15 +7799,15 @@ jump_lbl_407:
 	.byte	TOK_FP_MUL
 	.byte	TOK_FP_ADD
 	.byte	TOK_FP_STORE
-@FastBasic_LINE_795:  ; LINE 795
+@FastBasic_LINE_793:  ; LINE 793
 	.byte	TOK_CALL
 	.word	proc_lbl_DISPLAY_SCORE
-@FastBasic_LINE_796:  ; LINE 796
+@FastBasic_LINE_794:  ; LINE 794
 	.byte	TOK_JUMP
 	.word	proc_lbl_SET_UP_LEVEL_FONT
-@FastBasic_LINE_799:  ; LINE 799
+@FastBasic_LINE_797:  ; LINE 797
 proc_lbl_INITIALIZE:
-@FastBasic_LINE_800:  ; LINE 800
+@FastBasic_LINE_798:  ; LINE 798
 	.byte	TOK_0
 	.byte	TOK_PMGRAPHICS
 	.byte	TOK_BYTE
@@ -7835,7 +7841,7 @@ proc_lbl_INITIALIZE:
 	.byte	TOK_VAR_LOAD
 	.byte	13
 	.byte	TOK_DPOKE
-@FastBasic_LINE_801:  ; LINE 801
+@FastBasic_LINE_799:  ; LINE 799
 	.byte	TOK_VAR_LOAD
 	.byte	53
 	.byte	TOK_SADDR
@@ -7883,7 +7889,7 @@ proc_lbl_INITIALIZE:
 	.byte	40
 	.byte	TOK_ADD
 	.byte	TOK_DPOKE
-@FastBasic_LINE_802:  ; LINE 802
+@FastBasic_LINE_800:  ; LINE 800
 	.byte	TOK_VAR_SADDR
 	.byte	17
 	.byte	TOK_PUSH_VAR_LOAD
@@ -7914,7 +7920,7 @@ jump_lbl_414:
 	.word	jump_lbl_414
 jump_lbl_413:
 	.byte	TOK_FOR_EXIT
-@FastBasic_LINE_803:  ; LINE 803
+@FastBasic_LINE_801:  ; LINE 801
 	.byte	TOK_VAR_LOAD
 	.byte	53
 	.byte	TOK_PUSH_BYTE
@@ -7933,7 +7939,7 @@ jump_lbl_413:
 	.byte	TOK_VAR_LOAD
 	.byte	53
 	.byte	TOK_DPOKE
-@FastBasic_LINE_804:  ; LINE 804
+@FastBasic_LINE_802:  ; LINE 802
 	.byte	TOK_VAR_LOAD
 	.byte	53
 	.byte	TOK_PUSH_BYTE
@@ -7949,7 +7955,7 @@ jump_lbl_413:
 	.byte	TOK_BYTE
 	.byte	128
 	.byte	TOK_POKE
-@FastBasic_LINE_805:  ; LINE 805
+@FastBasic_LINE_803:  ; LINE 803
 	.byte	TOK_NUM
 	.word	512
 	.byte	TOK_SADDR
@@ -7962,7 +7968,7 @@ jump_lbl_413:
 	.byte	TOK_BYTE
 	.byte	192
 	.byte	TOK_POKE
-@FastBasic_LINE_806:  ; LINE 806
+@FastBasic_LINE_804:  ; LINE 804
 	.byte	TOK_NUM
 	.word	660
 	.byte	TOK_SADDR
@@ -7972,14 +7978,14 @@ jump_lbl_413:
 	.word	960
 	.byte	TOK_ADD
 	.byte	TOK_DPOKE
-@FastBasic_LINE_807:  ; LINE 807
+@FastBasic_LINE_805:  ; LINE 805
 	.byte	TOK_NUM
 	.word	703
 	.byte	TOK_SADDR
 	.byte	TOK_BYTE
 	.byte	4
 	.byte	TOK_POKE
-@FastBasic_LINE_808:  ; LINE 808
+@FastBasic_LINE_806:  ; LINE 806
 	.byte	TOK_NUM
 	.word	57344
 	.byte	TOK_PUSH_NUM
@@ -7987,14 +7993,14 @@ jump_lbl_413:
 	.byte	TOK_PUSH_NUM
 	.word	1024
 	.byte	TOK_MOVE
-@FastBasic_LINE_809:  ; LINE 809
+@FastBasic_LINE_807:  ; LINE 807
 	.byte	TOK_NUM
 	.word	756
 	.byte	TOK_SADDR
 	.byte	TOK_BYTE
 	.byte	176
 	.byte	TOK_POKE
-@FastBasic_LINE_810:  ; LINE 810
+@FastBasic_LINE_808:  ; LINE 808
 	.byte	TOK_VAR_SADDR
 	.byte	17
 	.byte	TOK_PUSH_0
@@ -8007,7 +8013,7 @@ jump_lbl_413:
 	.byte	TOK_CJUMP
 	.word	jump_lbl_415
 jump_lbl_416:
-@FastBasic_LINE_811:  ; LINE 811
+@FastBasic_LINE_809:  ; LINE 809
 	.byte	TOK_VAR_LOAD
 	.byte	17
 	.byte	TOK_PUSH_BYTE
@@ -8018,7 +8024,7 @@ jump_lbl_416:
 	.byte	TOK_ADD
 	.byte	TOK_VAR_STORE
 	.byte	6
-@FastBasic_LINE_812:  ; LINE 812
+@FastBasic_LINE_810:  ; LINE 810
 	.byte	TOK_VAR_SADDR
 	.byte	18
 	.byte	TOK_PUSH_NUM
@@ -8044,35 +8050,35 @@ jump_lbl_416:
 	.byte	TOK_CJUMP
 	.word	jump_lbl_417
 jump_lbl_418:
-@FastBasic_LINE_813:  ; LINE 813
+@FastBasic_LINE_811:  ; LINE 811
 	.byte	TOK_VAR_LOAD
 	.byte	18
 	.byte	TOK_SADDR
 	.byte	TOK_VAR_LOAD
 	.byte	6
 	.byte	TOK_POKE
-@FastBasic_LINE_814:  ; LINE 814
+@FastBasic_LINE_812:  ; LINE 812
 	.byte	TOK_FOR_NEXT
 	.byte	TOK_CJUMP
 	.word	jump_lbl_418
 jump_lbl_417:
 	.byte	TOK_FOR_EXIT
-@FastBasic_LINE_815:  ; LINE 815
+@FastBasic_LINE_813:  ; LINE 813
 	.byte	TOK_FOR_NEXT
 	.byte	TOK_CJUMP
 	.word	jump_lbl_416
 jump_lbl_415:
 	.byte	TOK_FOR_EXIT
-@FastBasic_LINE_816:  ; LINE 816
+@FastBasic_LINE_814:  ; LINE 814
 	.byte	TOK_CALL
 	.word	proc_lbl_SET_UP_LEVEL_FONT
-@FastBasic_LINE_817:  ; LINE 817
+@FastBasic_LINE_815:  ; LINE 815
 	.byte	TOK_BYTE_SADDR
 	.byte	87
 	.byte	TOK_BYTE
 	.byte	12
 	.byte	TOK_POKE
-@FastBasic_LINE_818:  ; LINE 818
+@FastBasic_LINE_816:  ; LINE 816
 	.byte	TOK_VAR_LOAD
 	.byte	13
 	.byte	TOK_SADDR
@@ -8087,68 +8093,68 @@ jump_lbl_415:
 	.byte	TOK_PUSH_NUM
 	.word	1020
 	.byte	TOK_MOVE
-@FastBasic_LINE_819:  ; LINE 819
+@FastBasic_LINE_817:  ; LINE 817
 	.byte	TOK_NUM
 	.word	704
 	.byte	TOK_SADDR
 	.byte	TOK_0
 	.byte	TOK_POKE
-@FastBasic_LINE_820:  ; LINE 820
+@FastBasic_LINE_818:  ; LINE 818
 	.byte	TOK_NUM
 	.word	705
 	.byte	TOK_SADDR
 	.byte	TOK_BYTE
 	.byte	68
 	.byte	TOK_POKE
-@FastBasic_LINE_821:  ; LINE 821
+@FastBasic_LINE_819:  ; LINE 819
 	.byte	TOK_NUM
 	.word	706
 	.byte	TOK_SADDR
 	.byte	TOK_BYTE
 	.byte	102
 	.byte	TOK_POKE
-@FastBasic_LINE_822:  ; LINE 822
+@FastBasic_LINE_820:  ; LINE 820
 	.byte	TOK_NUM
 	.word	707
 	.byte	TOK_SADDR
 	.byte	TOK_BYTE
 	.byte	180
 	.byte	TOK_POKE
-@FastBasic_LINE_823:  ; LINE 823
+@FastBasic_LINE_821:  ; LINE 821
 	.byte	TOK_NUM
 	.word	708
 	.byte	TOK_SADDR
 	.byte	TOK_BYTE
 	.byte	230
 	.byte	TOK_POKE
-@FastBasic_LINE_824:  ; LINE 824
+@FastBasic_LINE_822:  ; LINE 822
 	.byte	TOK_NUM
 	.word	709
 	.byte	TOK_SADDR
 	.byte	TOK_BYTE
 	.byte	28
 	.byte	TOK_POKE
-@FastBasic_LINE_825:  ; LINE 825
+@FastBasic_LINE_823:  ; LINE 823
 	.byte	TOK_NUM
 	.word	710
 	.byte	TOK_SADDR
 	.byte	TOK_BYTE
 	.byte	58
 	.byte	TOK_POKE
-@FastBasic_LINE_826:  ; LINE 826
+@FastBasic_LINE_824:  ; LINE 824
 	.byte	TOK_NUM
 	.word	711
 	.byte	TOK_SADDR
 	.byte	TOK_BYTE
 	.byte	130
 	.byte	TOK_POKE
-@FastBasic_LINE_827:  ; LINE 827
+@FastBasic_LINE_825:  ; LINE 825
 	.byte	TOK_NUM
 	.word	752
 	.byte	TOK_SADDR
 	.byte	TOK_1
 	.byte	TOK_POKE
-@FastBasic_LINE_828:  ; LINE 828
+@FastBasic_LINE_826:  ; LINE 826
 	.byte	TOK_BYTE_SADDR
 	.byte	COLOR
 	.byte	TOK_BYTE
@@ -8239,7 +8245,7 @@ jump_lbl_415:
 	.byte	TOK_BYTE
 	.byte	DRAWLN
 	.byte	TOK_DRAWTO
-@FastBasic_LINE_829:  ; LINE 829
+@FastBasic_LINE_827:  ; LINE 827
 	.byte	TOK_BYTE_SADDR
 	.byte	COLCRS
 	.byte	TOK_BYTE
@@ -8266,7 +8272,7 @@ jump_lbl_415:
 	.byte	TOK_BYTE
 	.byte	DRAWLN
 	.byte	TOK_DRAWTO
-@FastBasic_LINE_830:  ; LINE 830
+@FastBasic_LINE_828:  ; LINE 828
 	.byte	TOK_BYTE_SADDR
 	.byte	COLOR
 	.byte	TOK_BYTE
@@ -8295,7 +8301,7 @@ jump_lbl_415:
 	.byte	TOK_BYTE
 	.byte	DRAWLN
 	.byte	TOK_DRAWTO
-@FastBasic_LINE_831:  ; LINE 831
+@FastBasic_LINE_829:  ; LINE 829
 	.byte	TOK_BYTE_SADDR
 	.byte	COLOR
 	.byte	TOK_BYTE
@@ -8357,7 +8363,7 @@ jump_lbl_415:
 	.byte	13
 	.byte	TOK_POKE
 	.byte	TOK_PLOT
-@FastBasic_LINE_832:  ; LINE 832
+@FastBasic_LINE_830:  ; LINE 830
 	.byte	TOK_BYTE_SADDR
 	.byte	COLOR
 	.byte	TOK_BYTE
@@ -8403,7 +8409,7 @@ jump_lbl_415:
 	.byte	TOK_BYTE
 	.byte	DRAWLN
 	.byte	TOK_DRAWTO
-@FastBasic_LINE_833:  ; LINE 833
+@FastBasic_LINE_831:  ; LINE 831
 	.byte	TOK_BYTE_SADDR
 	.byte	COLOR
 	.byte	TOK_BYTE
@@ -8415,53 +8421,53 @@ jump_lbl_415:
 	.byte	TOK_BYTE
 	.byte	15
 	.byte	TOK_POKE
+@FastBasic_LINE_832:  ; LINE 832
+	.byte	TOK_BYTE_SADDR
+	.byte	COLCRS
+	.byte	TOK_0
+	.byte	TOK_DPOKE
+	.byte	TOK_BYTE_SADDR
+	.byte	ROWCRS
+	.byte	TOK_0
+	.byte	TOK_POKE
+	.byte	TOK_PLOT
+	.byte	TOK_BYTE_SADDR
+	.byte	COLCRS
+	.byte	TOK_0
+	.byte	TOK_DPOKE
+	.byte	TOK_BYTE_SADDR
+	.byte	ROWCRS
+	.byte	TOK_BYTE
+	.byte	23
+	.byte	TOK_POKE
+	.byte	TOK_BYTE
+	.byte	FILLIN
+	.byte	TOK_DRAWTO
+@FastBasic_LINE_833:  ; LINE 833
+	.byte	TOK_BYTE_SADDR
+	.byte	COLCRS
+	.byte	TOK_BYTE
+	.byte	24
+	.byte	TOK_DPOKE
+	.byte	TOK_BYTE_SADDR
+	.byte	ROWCRS
+	.byte	TOK_0
+	.byte	TOK_POKE
+	.byte	TOK_PLOT
+	.byte	TOK_BYTE_SADDR
+	.byte	COLCRS
+	.byte	TOK_BYTE
+	.byte	24
+	.byte	TOK_DPOKE
+	.byte	TOK_BYTE_SADDR
+	.byte	ROWCRS
+	.byte	TOK_BYTE
+	.byte	23
+	.byte	TOK_POKE
+	.byte	TOK_BYTE
+	.byte	FILLIN
+	.byte	TOK_DRAWTO
 @FastBasic_LINE_834:  ; LINE 834
-	.byte	TOK_BYTE_SADDR
-	.byte	COLCRS
-	.byte	TOK_0
-	.byte	TOK_DPOKE
-	.byte	TOK_BYTE_SADDR
-	.byte	ROWCRS
-	.byte	TOK_0
-	.byte	TOK_POKE
-	.byte	TOK_PLOT
-	.byte	TOK_BYTE_SADDR
-	.byte	COLCRS
-	.byte	TOK_0
-	.byte	TOK_DPOKE
-	.byte	TOK_BYTE_SADDR
-	.byte	ROWCRS
-	.byte	TOK_BYTE
-	.byte	23
-	.byte	TOK_POKE
-	.byte	TOK_BYTE
-	.byte	FILLIN
-	.byte	TOK_DRAWTO
-@FastBasic_LINE_835:  ; LINE 835
-	.byte	TOK_BYTE_SADDR
-	.byte	COLCRS
-	.byte	TOK_BYTE
-	.byte	24
-	.byte	TOK_DPOKE
-	.byte	TOK_BYTE_SADDR
-	.byte	ROWCRS
-	.byte	TOK_0
-	.byte	TOK_POKE
-	.byte	TOK_PLOT
-	.byte	TOK_BYTE_SADDR
-	.byte	COLCRS
-	.byte	TOK_BYTE
-	.byte	24
-	.byte	TOK_DPOKE
-	.byte	TOK_BYTE_SADDR
-	.byte	ROWCRS
-	.byte	TOK_BYTE
-	.byte	23
-	.byte	TOK_POKE
-	.byte	TOK_BYTE
-	.byte	FILLIN
-	.byte	TOK_DRAWTO
-@FastBasic_LINE_836:  ; LINE 836
 	.byte	TOK_BYTE_SADDR
 	.byte	COLCRS
 	.byte	TOK_BYTE
@@ -8486,11 +8492,11 @@ jump_lbl_415:
 	.byte	TOK_BYTE
 	.byte	FILLIN
 	.byte	TOK_DRAWTO
-@FastBasic_LINE_837:  ; LINE 837
+@FastBasic_LINE_835:  ; LINE 835
 	.byte	TOK_RET
-@FastBasic_LINE_840:  ; LINE 840
+@FastBasic_LINE_838:  ; LINE 838
 proc_lbl_SET_UP_LEVEL_FONT:
-@FastBasic_LINE_841:  ; LINE 841
+@FastBasic_LINE_839:  ; LINE 839
 	.byte	TOK_NUM
 	.word	45688
 	.byte	TOK_SADDR
@@ -8503,13 +8509,13 @@ proc_lbl_SET_UP_LEVEL_FONT:
 	.byte	TOK_PUSH_BYTE
 	.byte	48
 	.byte	TOK_MOVE
-@FastBasic_LINE_842:  ; LINE 842
+@FastBasic_LINE_840:  ; LINE 840
 	.byte	TOK_BYTE
 	.byte	2
 	.byte	TOK_RAND
 	.byte	TOK_VAR_STORE
 	.byte	8
-@FastBasic_LINE_843:  ; LINE 843
+@FastBasic_LINE_841:  ; LINE 841
 	.byte	TOK_VAR_ADDR
 	.byte	29
 	.byte	TOK_FP_LOAD
@@ -8522,25 +8528,25 @@ proc_lbl_SET_UP_LEVEL_FONT:
 	.byte	TOK_MOD
 	.byte	TOK_VAR_STORE
 	.byte	9
-@FastBasic_LINE_845:  ; LINE 845
+@FastBasic_LINE_843:  ; LINE 843
 	.byte	TOK_VAR_LOAD
 	.byte	9
 	.byte	TOK_COMP_0
 	.byte	TOK_L_NOT
 	.byte	TOK_CJUMP
 	.word	jump_lbl_421
-@FastBasic_LINE_846:  ; LINE 846
+@FastBasic_LINE_844:  ; LINE 844
 	.byte	TOK_NUM
 	.word	712
 	.byte	TOK_SADDR
 	.byte	TOK_BYTE
 	.byte	228
 	.byte	TOK_POKE
-@FastBasic_LINE_847:  ; LINE 847
+@FastBasic_LINE_845:  ; LINE 845
 	.byte	TOK_RET
-@FastBasic_LINE_848:  ; LINE 848
+@FastBasic_LINE_846:  ; LINE 846
 jump_lbl_421:
-@FastBasic_LINE_849:  ; LINE 849
+@FastBasic_LINE_847:  ; LINE 847
 	.byte	TOK_VAR_LOAD
 	.byte	9
 	.byte	TOK_PUSH_BYTE
@@ -8548,7 +8554,7 @@ jump_lbl_421:
 	.byte	TOK_NEQ
 	.byte	TOK_CJUMP
 	.word	jump_lbl_422
-@FastBasic_LINE_850:  ; LINE 850
+@FastBasic_LINE_848:  ; LINE 848
 	.byte	TOK_0
 	.byte	TOK_VAR_STORE
 	.byte	8
@@ -8567,7 +8573,7 @@ jump_lbl_421:
 	.byte	TOK_VAR_STORE
 	.byte	8
 jump_lbl_423:
-@FastBasic_LINE_851:  ; LINE 851
+@FastBasic_LINE_849:  ; LINE 849
 	.byte	TOK_VAR_SADDR
 	.byte	18
 	.byte	TOK_PUSH_1
@@ -8579,9 +8585,9 @@ jump_lbl_423:
 	.byte	TOK_L_NOT
 	.byte	TOK_CJUMP
 	.word	jump_lbl_424
-@FastBasic_LINE_852:  ; LINE 852
+@FastBasic_LINE_850:  ; LINE 850
 jump_lbl_426:
-@FastBasic_LINE_853:  ; LINE 853
+@FastBasic_LINE_851:  ; LINE 851
 	.byte	TOK_BYTE
 	.byte	8
 	.byte	TOK_RAND
@@ -8589,12 +8595,12 @@ jump_lbl_426:
 	.byte	TOK_ADD
 	.byte	TOK_VAR_STORE
 	.byte	6
-@FastBasic_LINE_854:  ; LINE 854
+@FastBasic_LINE_852:  ; LINE 852
 	.byte	TOK_VAR_LOAD
 	.byte	18
 	.byte	TOK_VAR_STORE
 	.byte	17
-@FastBasic_LINE_855:  ; LINE 855
+@FastBasic_LINE_853:  ; LINE 853
 	.byte	TOK_VAR_LOAD
 	.byte	17
 	.byte	TOK_PUSH_VAR_LOAD
@@ -8610,17 +8616,17 @@ jump_lbl_426:
 	.byte	TOK_VAR_STORE
 	.byte	17
 jump_lbl_427:
-@FastBasic_LINE_857:  ; LINE 857
+@FastBasic_LINE_856:  ; LINE 856
 	.byte	TOK_VAR_LOAD
 	.byte	9
 	.byte	TOK_PUSH_1
 	.byte	TOK_EQ
 	.byte	TOK_CJUMP
 	.word	jump_lbl_428
-@FastBasic_LINE_858:  ; LINE 858
+@FastBasic_LINE_857:  ; LINE 857
 	.byte	TOK_CALL
-	.word	proc_lbl_S_5850
-@FastBasic_LINE_859:  ; LINE 859
+	.word	proc_lbl_BACKGROUND_SET_1
+@FastBasic_LINE_858:  ; LINE 858
 	.byte	TOK_JUMP
 	.word	jump_lbl_429
 jump_lbl_428:
@@ -8631,10 +8637,10 @@ jump_lbl_428:
 	.byte	TOK_EQ
 	.byte	TOK_CJUMP
 	.word	jump_lbl_430
-@FastBasic_LINE_860:  ; LINE 860
+@FastBasic_LINE_859:  ; LINE 859
 	.byte	TOK_CALL
-	.word	proc_lbl_S_5860
-@FastBasic_LINE_861:  ; LINE 861
+	.word	proc_lbl_BACKGROUND_SET_2
+@FastBasic_LINE_860:  ; LINE 860
 	.byte	TOK_JUMP
 	.word	jump_lbl_429
 jump_lbl_430:
@@ -8645,10 +8651,10 @@ jump_lbl_430:
 	.byte	TOK_EQ
 	.byte	TOK_CJUMP
 	.word	jump_lbl_432
-@FastBasic_LINE_862:  ; LINE 862
+@FastBasic_LINE_861:  ; LINE 861
 	.byte	TOK_CALL
-	.word	proc_lbl_S_5870
-@FastBasic_LINE_863:  ; LINE 863
+	.word	proc_lbl_BACKGROUND_SET_3
+@FastBasic_LINE_862:  ; LINE 862
 	.byte	TOK_JUMP
 	.word	jump_lbl_429
 jump_lbl_432:
@@ -8659,10 +8665,10 @@ jump_lbl_432:
 	.byte	TOK_EQ
 	.byte	TOK_CJUMP
 	.word	jump_lbl_434
-@FastBasic_LINE_864:  ; LINE 864
+@FastBasic_LINE_863:  ; LINE 863
 	.byte	TOK_CALL
-	.word	proc_lbl_S_5880
-@FastBasic_LINE_865:  ; LINE 865
+	.word	proc_lbl_BACKGROUND_SET_4
+@FastBasic_LINE_864:  ; LINE 864
 	.byte	TOK_JUMP
 	.word	jump_lbl_429
 jump_lbl_434:
@@ -8673,10 +8679,10 @@ jump_lbl_434:
 	.byte	TOK_EQ
 	.byte	TOK_CJUMP
 	.word	jump_lbl_436
-@FastBasic_LINE_866:  ; LINE 866
+@FastBasic_LINE_865:  ; LINE 865
 	.byte	TOK_CALL
-	.word	proc_lbl_S_5890
-@FastBasic_LINE_867:  ; LINE 867
+	.word	proc_lbl_BACKGROUND_SET_5
+@FastBasic_LINE_866:  ; LINE 866
 	.byte	TOK_JUMP
 	.word	jump_lbl_429
 jump_lbl_436:
@@ -8687,10 +8693,10 @@ jump_lbl_436:
 	.byte	TOK_EQ
 	.byte	TOK_CJUMP
 	.word	jump_lbl_438
-@FastBasic_LINE_868:  ; LINE 868
+@FastBasic_LINE_867:  ; LINE 867
 	.byte	TOK_CALL
-	.word	proc_lbl_S_5850
-@FastBasic_LINE_869:  ; LINE 869
+	.word	proc_lbl_BACKGROUND_SET_1
+@FastBasic_LINE_868:  ; LINE 868
 	.byte	TOK_JUMP
 	.word	jump_lbl_429
 jump_lbl_438:
@@ -8701,10 +8707,10 @@ jump_lbl_438:
 	.byte	TOK_EQ
 	.byte	TOK_CJUMP
 	.word	jump_lbl_440
-@FastBasic_LINE_870:  ; LINE 870
+@FastBasic_LINE_869:  ; LINE 869
 	.byte	TOK_CALL
-	.word	proc_lbl_S_5850
-@FastBasic_LINE_871:  ; LINE 871
+	.word	proc_lbl_BACKGROUND_SET_1
+@FastBasic_LINE_870:  ; LINE 870
 	.byte	TOK_JUMP
 	.word	jump_lbl_429
 jump_lbl_440:
@@ -8715,10 +8721,10 @@ jump_lbl_440:
 	.byte	TOK_EQ
 	.byte	TOK_CJUMP
 	.word	jump_lbl_442
-@FastBasic_LINE_872:  ; LINE 872
+@FastBasic_LINE_871:  ; LINE 871
 	.byte	TOK_CALL
-	.word	proc_lbl_S_5870
-@FastBasic_LINE_873:  ; LINE 873
+	.word	proc_lbl_BACKGROUND_SET_3
+@FastBasic_LINE_872:  ; LINE 872
 	.byte	TOK_JUMP
 	.word	jump_lbl_429
 jump_lbl_442:
@@ -8729,12 +8735,12 @@ jump_lbl_442:
 	.byte	TOK_EQ
 	.byte	TOK_CJUMP
 	.word	jump_lbl_429
-@FastBasic_LINE_874:  ; LINE 874
+@FastBasic_LINE_873:  ; LINE 873
 	.byte	TOK_CALL
-	.word	proc_lbl_S_5890
-@FastBasic_LINE_875:  ; LINE 875
+	.word	proc_lbl_BACKGROUND_SET_5
+@FastBasic_LINE_874:  ; LINE 874
 jump_lbl_429:
-@FastBasic_LINE_876:  ; LINE 876
+@FastBasic_LINE_875:  ; LINE 875
 	.byte	TOK_NUM
 	.word	45687
 	.byte	TOK_PUSH_VAR_LOAD
@@ -8745,7 +8751,7 @@ jump_lbl_429:
 	.byte	TOK_L_NOT
 	.byte	TOK_CJUMP
 	.word	jump_lbl_426
-@FastBasic_LINE_877:  ; LINE 877
+@FastBasic_LINE_876:  ; LINE 876
 	.byte	TOK_NUM
 	.word	45687
 	.byte	TOK_PUSH_VAR_LOAD
@@ -8755,17 +8761,17 @@ jump_lbl_429:
 	.byte	TOK_VAR_LOAD
 	.byte	7
 	.byte	TOK_POKE
-@FastBasic_LINE_878:  ; LINE 878
+@FastBasic_LINE_877:  ; LINE 877
 	.byte	TOK_FOR_NEXT
 	.byte	TOK_CJUMP
 	.word	jump_lbl_426
 jump_lbl_424:
 	.byte	TOK_FOR_EXIT
-@FastBasic_LINE_879:  ; LINE 879
+@FastBasic_LINE_878:  ; LINE 878
 	.byte	TOK_JUMP
 	.word	jump_lbl_445
 jump_lbl_422:
-@FastBasic_LINE_880:  ; LINE 880
+@FastBasic_LINE_879:  ; LINE 879
 	.byte	TOK_VAR_LOAD
 	.byte	9
 	.byte	TOK_PUSH_BYTE
@@ -8773,7 +8779,7 @@ jump_lbl_422:
 	.byte	TOK_EQ
 	.byte	TOK_CJUMP
 	.word	jump_lbl_445
-@FastBasic_LINE_881:  ; LINE 881
+@FastBasic_LINE_880:  ; LINE 880
 	.byte	TOK_1
 	.byte	TOK_PUSH_BYTE
 	.byte	8
@@ -8809,7 +8815,7 @@ jump_lbl_422:
 	.byte	TOK_VAR_STORE
 	.byte	8
 jump_lbl_447:
-@FastBasic_LINE_882:  ; LINE 882
+@FastBasic_LINE_881:  ; LINE 881
 	.byte	TOK_VAR_SADDR
 	.byte	17
 	.byte	TOK_PUSH_1
@@ -8822,7 +8828,7 @@ jump_lbl_447:
 	.byte	TOK_CJUMP
 	.word	jump_lbl_448
 jump_lbl_449:
-@FastBasic_LINE_883:  ; LINE 883
+@FastBasic_LINE_882:  ; LINE 882
 	.byte	TOK_NUM
 	.word	45687
 	.byte	TOK_PUSH_VAR_LOAD
@@ -8838,7 +8844,7 @@ jump_lbl_449:
 	.byte	TOK_MUL
 	.byte	TOK_ADD
 	.byte	TOK_POKE
-@FastBasic_LINE_884:  ; LINE 884
+@FastBasic_LINE_883:  ; LINE 883
 	.byte	TOK_VAR_LOAD
 	.byte	17
 	.byte	TOK_PUSH_BYTE
@@ -8862,7 +8868,7 @@ jump_lbl_449:
 	.byte	TOK_ADD
 	.byte	TOK_POKE
 jump_lbl_450:
-@FastBasic_LINE_885:  ; LINE 885
+@FastBasic_LINE_884:  ; LINE 884
 	.byte	TOK_VAR_LOAD
 	.byte	17
 	.byte	TOK_PUSH_BYTE
@@ -8886,15 +8892,15 @@ jump_lbl_450:
 	.byte	TOK_ADD
 	.byte	TOK_POKE
 jump_lbl_451:
-@FastBasic_LINE_886:  ; LINE 886
+@FastBasic_LINE_885:  ; LINE 885
 	.byte	TOK_FOR_NEXT
 	.byte	TOK_CJUMP
 	.word	jump_lbl_449
 jump_lbl_448:
 	.byte	TOK_FOR_EXIT
-@FastBasic_LINE_888:  ; LINE 888
+@FastBasic_LINE_887:  ; LINE 887
 jump_lbl_445:
-@FastBasic_LINE_889:  ; LINE 889
+@FastBasic_LINE_888:  ; LINE 888
 	.byte	TOK_NUM
 	.word	45688
 	.byte	TOK_PUSH_NUM
@@ -8902,19 +8908,19 @@ jump_lbl_445:
 	.byte	TOK_PUSH_BYTE
 	.byte	40
 	.byte	TOK_MOVE
-@FastBasic_LINE_890:  ; LINE 890
+@FastBasic_LINE_889:  ; LINE 889
 	.byte	TOK_NUM
 	.word	45728
 	.byte	TOK_SADDR
 	.byte	TOK_0
 	.byte	TOK_DPOKE
-@FastBasic_LINE_891:  ; LINE 891
+@FastBasic_LINE_890:  ; LINE 890
 	.byte	TOK_NUM
 	.word	45730
 	.byte	TOK_SADDR
 	.byte	TOK_0
 	.byte	TOK_DPOKE
-@FastBasic_LINE_892:  ; LINE 892
+@FastBasic_LINE_891:  ; LINE 891
 	.byte	TOK_VAR_SADDR
 	.byte	17
 	.byte	TOK_PUSH_NUM
@@ -8928,7 +8934,7 @@ jump_lbl_445:
 	.byte	TOK_CJUMP
 	.word	jump_lbl_452
 jump_lbl_453:
-@FastBasic_LINE_893:  ; LINE 893
+@FastBasic_LINE_892:  ; LINE 892
 	.byte	TOK_VAR_LOAD
 	.byte	17
 	.byte	TOK_SADDR
@@ -8939,13 +8945,13 @@ jump_lbl_453:
 	.byte	15
 	.byte	TOK_BIT_AND
 	.byte	TOK_POKE
-@FastBasic_LINE_894:  ; LINE 894
+@FastBasic_LINE_893:  ; LINE 893
 	.byte	TOK_FOR_NEXT
 	.byte	TOK_CJUMP
 	.word	jump_lbl_453
 jump_lbl_452:
 	.byte	TOK_FOR_EXIT
-@FastBasic_LINE_895:  ; LINE 895
+@FastBasic_LINE_894:  ; LINE 894
 	.byte	TOK_VAR_SADDR
 	.byte	17
 	.byte	TOK_PUSH_NUM
@@ -8959,7 +8965,7 @@ jump_lbl_452:
 	.byte	TOK_CJUMP
 	.word	jump_lbl_454
 jump_lbl_455:
-@FastBasic_LINE_896:  ; LINE 896
+@FastBasic_LINE_895:  ; LINE 895
 	.byte	TOK_VAR_LOAD
 	.byte	17
 	.byte	TOK_SADDR
@@ -8970,24 +8976,24 @@ jump_lbl_455:
 	.byte	240
 	.byte	TOK_BIT_AND
 	.byte	TOK_POKE
-@FastBasic_LINE_897:  ; LINE 897
+@FastBasic_LINE_896:  ; LINE 896
 	.byte	TOK_FOR_NEXT
 	.byte	TOK_CJUMP
 	.word	jump_lbl_455
 jump_lbl_454:
 	.byte	TOK_FOR_EXIT
-@FastBasic_LINE_898:  ; LINE 898
+@FastBasic_LINE_897:  ; LINE 897
 	.byte	TOK_RET
+@FastBasic_LINE_899:  ; LINE 899
+proc_lbl_BACKGROUND_SET_1:
 @FastBasic_LINE_900:  ; LINE 900
-proc_lbl_S_5850:
-@FastBasic_LINE_901:  ; LINE 901
 	.byte	TOK_NUM
 	.word	712
 	.byte	TOK_SADDR
 	.byte	TOK_BYTE
 	.byte	158
 	.byte	TOK_POKE
-@FastBasic_LINE_902:  ; LINE 902
+@FastBasic_LINE_901:  ; LINE 901
 	.byte	TOK_VAR_LOAD
 	.byte	17
 	.byte	TOK_PUSH_VAR_LOAD
@@ -8998,7 +9004,7 @@ proc_lbl_S_5850:
 	.byte	TOK_ADD
 	.byte	TOK_VAR_STORE
 	.byte	7
-@FastBasic_LINE_903:  ; LINE 903
+@FastBasic_LINE_902:  ; LINE 902
 	.byte	TOK_VAR_LOAD
 	.byte	6
 	.byte	TOK_PUSH_1
@@ -9016,18 +9022,18 @@ proc_lbl_S_5850:
 	.byte	TOK_ADD
 	.byte	TOK_VAR_STORE
 	.byte	7
-@FastBasic_LINE_904:  ; LINE 904
+@FastBasic_LINE_903:  ; LINE 903
 	.byte	TOK_RET
+@FastBasic_LINE_905:  ; LINE 905
+proc_lbl_BACKGROUND_SET_2:
 @FastBasic_LINE_906:  ; LINE 906
-proc_lbl_S_5860:
-@FastBasic_LINE_907:  ; LINE 907
 	.byte	TOK_NUM
 	.word	712
 	.byte	TOK_SADDR
 	.byte	TOK_BYTE
 	.byte	220
 	.byte	TOK_POKE
-@FastBasic_LINE_908:  ; LINE 908
+@FastBasic_LINE_907:  ; LINE 907
 	.byte	TOK_VAR_LOAD
 	.byte	17
 	.byte	TOK_PUSH_VAR_LOAD
@@ -9038,18 +9044,18 @@ proc_lbl_S_5860:
 	.byte	TOK_ADD
 	.byte	TOK_VAR_STORE
 	.byte	7
-@FastBasic_LINE_909:  ; LINE 909
+@FastBasic_LINE_908:  ; LINE 908
 	.byte	TOK_RET
+@FastBasic_LINE_910:  ; LINE 910
+proc_lbl_BACKGROUND_SET_3:
 @FastBasic_LINE_911:  ; LINE 911
-proc_lbl_S_5870:
-@FastBasic_LINE_912:  ; LINE 912
 	.byte	TOK_NUM
 	.word	712
 	.byte	TOK_SADDR
 	.byte	TOK_BYTE
 	.byte	86
 	.byte	TOK_POKE
-@FastBasic_LINE_913:  ; LINE 913
+@FastBasic_LINE_912:  ; LINE 912
 	.byte	TOK_VAR_LOAD
 	.byte	17
 	.byte	TOK_PUSH_BYTE
@@ -9060,7 +9066,7 @@ proc_lbl_S_5870:
 	.byte	TOK_ADD
 	.byte	TOK_VAR_STORE
 	.byte	7
-@FastBasic_LINE_914:  ; LINE 914
+@FastBasic_LINE_913:  ; LINE 913
 	.byte	TOK_VAR_LOAD
 	.byte	6
 	.byte	TOK_PUSH_BYTE
@@ -9077,18 +9083,18 @@ proc_lbl_S_5870:
 	.byte	TOK_ADD
 	.byte	TOK_VAR_STORE
 	.byte	7
-@FastBasic_LINE_915:  ; LINE 915
+@FastBasic_LINE_914:  ; LINE 914
 	.byte	TOK_RET
+@FastBasic_LINE_916:  ; LINE 916
+proc_lbl_BACKGROUND_SET_4:
 @FastBasic_LINE_917:  ; LINE 917
-proc_lbl_S_5880:
-@FastBasic_LINE_918:  ; LINE 918
 	.byte	TOK_NUM
 	.word	712
 	.byte	TOK_SADDR
 	.byte	TOK_BYTE
 	.byte	40
 	.byte	TOK_POKE
-@FastBasic_LINE_919:  ; LINE 919
+@FastBasic_LINE_918:  ; LINE 918
 	.byte	TOK_VAR_LOAD
 	.byte	17
 	.byte	TOK_PUSH_BYTE
@@ -9107,18 +9113,18 @@ proc_lbl_S_5880:
 	.byte	TOK_ADD
 	.byte	TOK_VAR_STORE
 	.byte	7
-@FastBasic_LINE_920:  ; LINE 920
+@FastBasic_LINE_919:  ; LINE 919
 	.byte	TOK_RET
+@FastBasic_LINE_921:  ; LINE 921
+proc_lbl_BACKGROUND_SET_5:
 @FastBasic_LINE_922:  ; LINE 922
-proc_lbl_S_5890:
-@FastBasic_LINE_923:  ; LINE 923
 	.byte	TOK_NUM
 	.word	712
 	.byte	TOK_SADDR
 	.byte	TOK_BYTE
 	.byte	158
 	.byte	TOK_POKE
-@FastBasic_LINE_924:  ; LINE 924
+@FastBasic_LINE_923:  ; LINE 923
 	.byte	TOK_VAR_LOAD
 	.byte	17
 	.byte	TOK_PUSH_BYTE
@@ -9129,7 +9135,7 @@ proc_lbl_S_5890:
 	.byte	TOK_ADD
 	.byte	TOK_VAR_STORE
 	.byte	7
-@FastBasic_LINE_925:  ; LINE 925
+@FastBasic_LINE_924:  ; LINE 924
 	.byte	TOK_VAR_LOAD
 	.byte	6
 	.byte	TOK_PUSH_BYTE
@@ -9149,5 +9155,5 @@ proc_lbl_S_5890:
 	.byte	TOK_ADD
 	.byte	TOK_VAR_STORE
 	.byte	7
-@FastBasic_LINE_926:  ; LINE 926
+@FastBasic_LINE_925:  ; LINE 925
 	.byte	TOK_RET
