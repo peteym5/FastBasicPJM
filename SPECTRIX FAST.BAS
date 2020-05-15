@@ -37,17 +37,15 @@
           MX=0
           CDX=0
           CDY=0
-          CS%=0.2
           
           ' Instead of fractional enemy movement, 
           ' enemy will when a countdown reaches 0, and resets. 
           ' This is to allow the enemy variables to be integers
           
           
-          ENEMY_MOVE_NOW = 0
-          ENEMY_MOVE_RESET = 4
-          ENEMY_MOVE_MULTIPLY = 0
+
           EXEC AT_2000
+          ENEMY_DELAY_ADD = 160
           EXIT_FLAG = 0          
           EXEC DRAW_ROOM_SCREEN
           REPEAT
@@ -56,6 +54,7 @@
                 EXEC DRAW_ROOM_SCREEN
                 EXIT_FLAG = 0
               ENDIF
+              ENEMY_DELAY_SUM = 0 
               REPEAT
                   X=(-(STICK(0)=11)+(STICK(0)=7))
                   Y=(-(STICK(0)=14)+(STICK(0)=13))
@@ -82,18 +81,25 @@
                   DRAWTO A,B
                   COLOR 8
                   DRAWTO A,B+5
-                  IF ENEMY_TYPE=1 
-                    EXEC AT_250
-                  ELIF ENEMY_TYPE=2 
-                    EXEC AT_300
-                  ELIF ENEMY_TYPE=3 
-                    EXEC AT_350
-                  ELIF ENEMY_TYPE=4 
-                    EXEC AT_400
-                  ELIF ENEMY_TYPE=5 
-                    EXEC AT_450
+                  ENEMY_DELAY_SUM = ENEMY_DELAY_SUM + ENEMY_DELAY_ADD
+                  IF ENEMY_DELAY_SUM > 255
+                    ENEMY_DELAY_SUM = ENEMY_DELAY_SUM&255
+                    PAUSE 1
+                  ELSE                  
+                    IF ENEMY_TYPE=0
+                      PAUSE 1
+                    ELIF ENEMY_TYPE=1 
+                      EXEC AT_250
+                    ELIF ENEMY_TYPE=2 
+                      EXEC AT_300
+                    ELIF ENEMY_TYPE=3 
+                      EXEC AT_350
+                    ELIF ENEMY_TYPE=4 
+                      EXEC AT_400
+                    ELIF ENEMY_TYPE=5 
+                      EXEC AT_450
+                    ENDIF
                   ENDIF
-    
                 IF STRIG(0)=0 THEN EXEC AT_500                
                 IF X<>0 OR Y<>0  
                     SOUND 1,240,4,8
@@ -103,6 +109,8 @@
                 IF TR=2 AND A>32 AND A<48 AND B>80 AND B<100 
                   EXIG_FLAG = 3
                 ENDIF
+                
+                
               UNTIL EXIT_FLAG > 0
               IF EXIT_FLAG = 1
                 EXEC SHOOT_ENEMY_LASER              
@@ -146,10 +154,10 @@ PROC AT_250
     CM=CM+MX
     IF CM<0 OR CM>5 THEN MX=-MX
     IF C>A-4 AND C<A+4 AND D>B-8 AND D<B+8 THEN EXIT_FLAG = 2
-    IF C<A THEN C=C+INT(2*CS%)
-    IF C>A THEN C=C-INT(2*CS%)
-    IF D>B THEN D=D-INT(4*CS%)
-    IF D<B THEN D=D+INT(4*CS%)
+    IF C<A THEN C=C+2
+    IF C>A THEN C=C-2
+    IF D>B THEN D=D-4
+    IF D<B THEN D=D+4
     COLOR 5
     PLOT C,D:DRAWTO C+2,D-1
     PLOT C,D:DRAWTO C-2,D-1
@@ -167,10 +175,10 @@ PROC AT_300
     COLOR 0
     PLOT C+1,D+1:DRAWTO C+4,D+4
     PLOT C-1,D+1:DRAWTO C-4,D+4:DRAWTO C+4,D+4
-    IF C<A THEN C=C+INT(1*CS%)
-    IF C>A THEN C=C-INT(1*CS%)
-    IF D>B THEN D=D-INT(3*CS%)
-    IF D<B THEN D=D+INT(3*CS%)
+    IF C<A THEN C=C+1
+    IF C>A THEN C=C-1
+    IF D>B THEN D=D-3
+    IF D<B THEN D=D+3
     COLOR 4
     PLOT C-1,D-3:DRAWTO C+1,D-3
     PLOT C-1,D-2:DRAWTO C+1,D-2
@@ -207,9 +215,12 @@ PROC AT_350
      COLOR 15
      PLOT C+6,D+6:DRAWTO C-6,D+6
 
-     IF X=0 AND Y=0 THEN MX=MX+1
-     IF MX>10-INT(CS%*4.5) THEN EXIT_FLAG=1
-     IF X<>0 OR Y<>0 THEN MX=0
+     IF X=0 AND Y=0 
+        MX=MX+(16-INT(ENEMY_DELAY_ADD/16))
+        IF MX>200 THEN EXIT_FLAG=1
+     ELSE
+        MX=0
+     ENDIF
 ENDPROC 
 
 PROC AT_400
@@ -217,10 +228,10 @@ PROC AT_400
     PLOT C,D:DRAWTO C+5,D+10:DRAWTO C,D+4:DRAWTO C-5,D+10:DRAWTO C,D
     PLOT C,D+1:DRAWTO C+3,D+12
     PLOT C,D+1:DRAWTO C-3,D+12
-    IF C<A THEN C=C+INT(4*CS%)
-    IF C>A THEN C=C-INT(4*CS%)
-    IF D+8>B THEN D=D-INT(8*CS%)
-    IF D+8<B THEN D=D+INT(8*CS%)
+    IF C<A THEN C=C+4
+    IF C>A THEN C=C-4
+    IF D+8>B THEN D=D-8
+    IF D+8<B THEN D=D+8
     IF C>A-4 AND C<A+4 AND D>B-10 AND D<B+10    
       EXIT_FLAG = 2
     ENDIF    
@@ -236,7 +247,7 @@ PROC AT_450
       PLOT C-2,D:DRAWTO C+2,D
       PLOT C-2,D+1:DRAWTO C+2,D+1
       PLOT C-1,D+2:DRAWTO C+1,D+2
-      C=C+CDX*INT(2+CS%*4)
+      C=C+CDX*4
       D=D+CDY
       IF D<20 OR D>160 
           D=D-CDY:CDY=-CDY
@@ -497,6 +508,8 @@ PROC DRAW_ROOM_SCREEN
       SOUND 0,255-N,10,12+INT(N/64)
       SETCOLOR 4,0,INT(N/32)
     NEXT N
+    SOUND 0,0,0,0
+    
 ENDPROC 
 
 PROC AT_2000
@@ -514,8 +527,10 @@ PROC AT_2000
     E=RAND(9)+1
     F=RAND(7)+3
     TR=1
-    CS%=CS%+0.2
-    IF CS%>2 THEN C=2
+    
+    IF ENEMY_DELAY_ADD >=15 THEN ENEMY_DELAY_ADD = ENEMY_DELAY_ADD - 16
+    
+
 ENDPROC 
 
 PROC SHOW_GAME_OVER
