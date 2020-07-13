@@ -14,33 +14,31 @@ DECKSIZE = 52
 NUMBER_OF_DECKS = 4
                                           
 DIM BONUS_777_OPTION_SHOW$(1)   
-BONUS_777_OPTION_SHOW$(0) =    "NO BONUS WITH 777           "
-BONUS_777_OPTION_SHOW$(1) =    "PAYS 3:1, SUIT 4:1          "
+BONUS_777_OPTION_SHOW$(0) =    "NO BONUS WITH 777       "
+BONUS_777_OPTION_SHOW$(1) =    "PAYS 3:1, SUIT 4:1      "
 
 DIM BONUS_678_OPTION_SHOW$(1)   
-BONUS_678_OPTION_SHOW$(0) =    "NO BONUS WITH 678           "
-BONUS_678_OPTION_SHOW$(1) =    "PAYS 3:1, SUIT 4:1          "
+BONUS_678_OPTION_SHOW$(0) =    "NO BONUS WITH 678       "
+BONUS_678_OPTION_SHOW$(1) =    "PAYS 3:1, SUIT 4:1      "
 BONUS777 = 0
 BONUS678 = 0
  
 DEALERTIEWINS = 1
 
 DEALERSOFT17HIT = 0
-
 'DIM UNBUSTED_OPTION_SHOW$(1)
 CARDCHARLIEWINSET = 6
 
-SPLITSET = 0
-                      
+SPLITSET = 0                      
 'BLACKJACK_BONUS_OPTION_SHOW$(3) = "                                 "
 SUIT21BONUS = 0
 COLOR21BONUS  = 0 
 
-'DIM NUMBER_OF_PLAYERS_OPTION_SHOW$(3)
-'NUMBER_OF_PLAYERS_OPTION_SHOW$(0) = "ONE PLAYER           "            
-'NUMBER_OF_PLAYERS_OPTION_SHOW$(1) = "TWO PLAYER           "
-'NUMBER_OF_PLAYERS_OPTION_SHOW$(2) = "THREE PLAYER         "
-'NUMBER_OF_PLAYERS_OPTION_SHOW$(3) = "FOUR PLAYER          "
+DIM NUMBER_OF_PLAYERS_OPTION_SHOW$(3)
+NUMBER_OF_PLAYERS_OPTION_SHOW$(0) = "ONE PLAYER   "            
+NUMBER_OF_PLAYERS_OPTION_SHOW$(1) = "TWO PLAYERS  "
+NUMBER_OF_PLAYERS_OPTION_SHOW$(2) = "THREE PLAYERS"
+NUMBER_OF_PLAYERS_OPTION_SHOW$(3) = "FOUR PLAYERS "
 
 
 
@@ -1245,35 +1243,72 @@ PROC TITLE_SCREEN
 '   SET WINDOW ON
 '   REPEAT
       RESET_TITLE = 0
-      GRAPHICS 0
-      CLS
       POKE 82,0
-      POKE 710,210:POKE 709,12:POKE 712,210
+      POKE 710,210:POKE 709,10:POKE 712,210
       POKE 756,@CHARSET_GAME_HI
+      DPOKE 560,@display_list_title
+      DPOKE $0224,@TITLE_VBI
+      DPOKE $0200,@TITLE00_DLI
+      DPOKE 88,@SCREEN_ADDR
+      POKE $D40E,192
+      POKE @DLIV0,0
+      POKE @DLIV1,0
+      POKE 752,1
       POSITION 0,0
-      PRINT "        Atari Casino Black Jack        "
-      POSITION 0,2      
+      CLS
+      PRINT "   ATARI CASINO         BLACK JACK     "
+      POSITION 0,1      
       PRINT "               A Game By Peter J. Meyer"
 
 
-                                                                                            
-       
-      
-
-      POSITION 0,5
+      POSITION 0,4
       PRINT "   Deck Size:"
-      POSITION 13,5
+      'POSITION 0,5
+      PRINT "Number Decks:"
+      'POSITION 0,6
+      PRINT " Dealer Hits:"     
+      'POSITION 0,7     
+      PRINT "  Dealer Tie:"
+      'POSITION 0,8
+      PRINT "  Black Jack:"
+      'POSITION 0,9 
+      PRINT " Double Down:"
+      'POSITION 0,10
+      PRINT "Unbust Limit:"
+      'POSITION 0,11
+      PRINT "  Split Rule:"
+      'POSITION 0,12
+      PRINT "   Surrender:"
+      'POSITION 0,13
+      PRINT "   777 Bonus:"
+      'POSITION 0,14
+      PRINT "   678 Bonus:"
+      'POSITION 0,15
+      PRINT "     Players:"
+                                                                                            
+      POSITION 10,17
+      PRINT "Press Start to Begin"
+
+     EXEC SHOW_OPTIONS
+
+''    UNTIL SELECTING=2 OR SELECTING=3
+    
+   'REM GET IMAGE 255,0,0,640,480
+   'REM SAVE IMAGE "TITLE SCREEN SHOT.BMP",255
+ENDPROC
+
+PROC SHOW_OPTIONS
+      POSITION 13,4
       IF DECKSIZE = 52
         PRINT "48 CARD DECKS(Spanish 21)"
       ELIF DECKSIZE = 48
-        PRINT "52 CARD DECKS            "
+        PRINT "52 CARD DECKS(Standard)  "
       ELIF DECKSIZE = 56
         PRINT "56 CARD DECKS            "
       ENDIF
       
-      POSITION 0,7
-      PRINT "Number Decks:"
-      POSITION 13,7
+
+      POSITION 13,5
       IF NUMBER_OF_DECKS = 4
         PRINT "FOUR DECKS  "
       ELIF NUMBER_OF_DECKS = 6
@@ -1283,111 +1318,89 @@ PROC TITLE_SCREEN
       ENDIF
 
       
-      POSITION 0,9
-      PRINT " Dealer Hits:"     
-      POSITION 13,9
+
+      POSITION 13,6
       IF DEALERSOFT17HIT = 0
         PRINT "HOLDS ON 17 OR MORE      "
       ELSE
         PRINT "DEALER HITS SOFT 17      "
       ENDIF
-     POSITION 0,11     
-     PRINT "  Dealer Tie:"
-     POSITION 13,11
-     IF DEALERTIEWINS = 0
+
+
+      POSITION 13,7
+      IF DEALERTIEWINS = 0
         PRINT "BET RETURNED. PUSH.      "
-     ELSE
+      ELSE
         PRINT "LOOSE BET, GOES TO DEALER"
-     ENDIF
+      ENDIF
      
+      POSITION 13,8 
+      IF SUIT21BONUS = 0
+          PRINT "NO BLACKJACK BONUS ALL 3:2"
+      ELIF SUIT21BONUS = 1
+          PRINT "SUIT BLACKJACK PAYS 2:1   "
+      ELIF SUIT21BONUS = 2                    
+          PRINT "SAME COLOR  PAYS 2:1      "
+      ENDIF
+
+
+      POSITION 13,9 
+      IF DBL_DOWN_SET = 0
+         PRINT "ANY TOTAL ALLOWED  "
+      ELIF DBL_DOWN_SET = 1
+         PRINT "10 OR 11 ONLY      "
+      ELIF DBL_DOWN_SET = 2
+         PRINT "9, 10, OR 11 ONLY  "
+      ELSE  
+         PRINT "UPTO 3 CARDS       "
+      ENDIF
+
      
-     POSITION 0,13
-     PRINT "Unbust Limit:"
-     POSITION 13,13
+    
+     POSITION 13,10
      IF CARDCHARLIEWINSET = 6 
-       PRINT "SIX CARD CHARLIE WINS  "
+          PRINT "SIX CARD CHARLIE WINS  "
      ELSE  
-       PRINT "FIVE CARD CHARLIE WINS "
+          PRINT "FIVE CARD CHARLIE WINS "
      ENDIF
 
-     POSITION 0,15
-     PRINT "   Surrender:"
-     POSITION 13,15
+
+      POSITION 13,11
+      IF SPLITSET = 0
+          PRINT "SPLIT ANY PAIR 10=(J,Q,K)"
+      ELIF SPLITSET = 1
+          PRINT "SPLIT EXACT PAIR         "
+      ELSE  
+          PRINT "NO SPLIT ACES            "
+      ENDIF
+
+
+
+     POSITION 13,12
      IF ALLOWSURRENDER = 0
         PRINT "NO PLAYER SURRENDER      "
      ELSE
         PRINT "ALLOWED HALF BET RETURNED"
      ENDIF  
-
-
   
 
 
-     POSITION 0,17
-     PRINT "   777 Bonus:"
-     POSITION 13,17
+
+     POSITION 13,13
      IF BONUS777 < 2 
         PRINT BONUS_777_OPTION_SHOW$(BONUS777)
      ENDIF
 
   
-'    POSITION 0,19
-'    PRINT "   678 Bonus:"
-'    POSITION 13,19  
-'    IF BONUS678<2
-'       PRINT BONUS_678_OPTION_SHOW$(BONUS678)
-'    ENDIF
 
-'    POSITION 0,21
-'    PRINT "     Players:"
-'    POSITION 13,21
-'    I = LASTPLAYER 
-'    IF I < 4
-'          PRINT NUMBER_OF_PLAYERS_OPTION_SHOW$(I)
-'    ENDIF
+     POSITION 13,14  
+     IF BONUS678<2
+        PRINT BONUS_678_OPTION_SHOW$(BONUS678)
+     ENDIF
 
-
-'     POSITION 0,17
-'     PRINT "  Split Rule:"
-'     POSITION 13,17
-'     IF SPLITSET = 0
-'        PRINT "SPLIT ANY PAIR 10=(J,Q,K)"
-'     ELIF SPLITSET = 1
-'        PRINT "SPLIT EXACT PAIR         "
-'     ELSE  
-'        PRINT "NO SPLIT ACES            "
-'     ENDIF
-'  
-'     POSITION 0,19
-'     PRINT " Double Down:"
-'     POSITION 13,19  
-'     IF DBL_DOWN_SET = 0
-'        PRINT "ANY TOTAL ALLOWED  "
-'     ELIF DBL_DOWN_SET = 1
-'        PRINT "10 OR 11 ONLY      "
-'     ELIF DBL_DOWN_SET = 2
-'        PRINT "9, 10, OR 11 ONLY  "
-'     ELSE  
-'        PRINT "UPTO 3 CARDS       "
-'     ENDIF
-'
-'     POSITION 0,21
-'     PRINT "  Black Jack:"
-'     POSITION 13,21
-'
-'     IF SUIT21BONUS = 0
-'          PRINT "NO BLACKJACK BONUS ALL 3:2       "
-'     ELIF SUIT21BONUS = 1
-'        PRINT "SUIT BLACKJACK PAYS 2:1          "
-'     ELIF SUIT21BONUS = 2
-'        PRINT "SAME COLOR BLACKJACK PAYS 2:1    "
-'     ENDIF
-
-
-
-''    UNTIL SELECTING=2 OR SELECTING=3
-    
-   'REM GET IMAGE 255,0,0,640,480
-   'REM SAVE IMAGE "TITLE SCREEN SHOT.BMP",255
+     POSITION 13,15
+     I = LASTPLAYER 
+     IF I < 4
+           PRINT NUMBER_OF_PLAYERS_OPTION_SHOW$(I)
+     ENDIF
 ENDPROC
-
