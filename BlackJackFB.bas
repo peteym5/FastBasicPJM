@@ -1225,7 +1225,10 @@ PROC TITLE_SCREEN
    J = 0
    K = 0   
    L = 0   
-   N = 0   
+   N = 0
+   CONSOL_DOWN = 0
+   SELECTED = 0
+   POKE @DLIV1,SELECTED   
    MOUSECLICK = 0
    BUTTONUP = 0
    SELECTED_MODE = 0
@@ -1290,6 +1293,29 @@ PROC TITLE_SCREEN
       PRINT "Press Start to Begin"
 
      EXEC SHOW_OPTIONS
+     
+     REPEAT
+        IF PEEK($D01F) <> 7 
+          IF CONSOL_DOWN = 0
+            IF PEEK($D01F) = 5 
+              SELECTED=PEEK(@DLIV1)
+              SELECTED = SELECTED + 1
+              IF SELECTED>11 THEN SELECTED=0
+              POKE @DLIV1,SELECTED              
+            ELIF PEEK($D01F) = 3
+               A=PEEK(@DLIV1)
+               EXEC Change_Game_Option
+               EXEC SHOW_OPTIONS
+            ENDIF          
+            CONSOL_DOWN = 150
+          ELSE
+            CONSOL_DOWN = CONSOL_DOWN - 1 
+          ENDIF
+        ELSE
+          CONSOL_DOWN = 0
+        ENDIF   
+     UNTIL PEEK($D01F) = 6
+     
 
 ''    UNTIL SELECTING=2 OR SELECTING=3
     
@@ -1299,6 +1325,7 @@ ENDPROC
 
 PROC SHOW_OPTIONS
       POSITION 13,4
+      'Deck size can be 48 or 52 cards, 56 Deck Size disabled
       IF DECKSIZE = 52
         PRINT "48 CARD DECKS(Spanish 21)"
       ELIF DECKSIZE = 48
@@ -1309,6 +1336,7 @@ PROC SHOW_OPTIONS
       
 
       POSITION 13,5
+      'Number of Decks can 4,6,or 8 Decks
       IF NUMBER_OF_DECKS = 4
         PRINT "FOUR DECKS  "
       ELIF NUMBER_OF_DECKS = 6
@@ -1399,8 +1427,82 @@ PROC SHOW_OPTIONS
      ENDIF
 
      POSITION 13,15
-     I = LASTPLAYER 
+     I = LASTPLAYER - 1 
      IF I < 4
            PRINT NUMBER_OF_PLAYERS_OPTION_SHOW$(I)
      ENDIF
 ENDPROC
+
+PROC Change_Game_Option
+    SELECTED=PEEK(@DLIV1)
+    IF SELECTED = 0 
+        'Deck size can be 48 or 52 cards
+        DECKSIZE = DECKSIZE + 4
+        IF DECKSIZE >=56 THEN DECKSIZE = 48      
+    ELIF SELECTED = 1
+        'Number of Decks can 4,6,or 8 Decks
+        NUMBER_OF_DECKS = NUMBER_OF_DECKS + 2
+        IF NUMBER_OF_DECKS >= 10 THEN NUMBER_OF_DECKS = 4 
+    ELIF SELECTED = 2
+        'A soft hit is when dealer has 17 with an Ace, be able to hit again, and if over 21, Ace becomes 1.
+        IF DEALERSOFT17HIT = 0 
+          DEALERSOFT17HIT = 1
+        ELSE
+          DEALERSOFT17HIT = 0
+        ENDIF    
+    ELIF SELECTED = 3
+        'Some Casino's have a push rule, if tie, bet is returned.
+        IF DEALERTIEWINS = 0
+            DEALERTIEWINS = 1
+        ELSE
+            DEALERTIEWINS = 0
+        ENDIF
+    ELIF SELECTED = 4
+        'Blackjack on opening deal. If two hards are same suit or color, 2x bet is paid out'
+        SUIT21BONUS = SUIT21BONUS + 1
+        IF SUIT21BONUS >=3 THEN SUIT21BONUS = 0
+    ELIF SELECTED = 5
+        DBL_DOWN_SET = DBL_DOWN_SET + 1
+        IF DBL_DOWN_SET >=3 THEN DBL_DOWN_SET = 0    
+    ELIF SELECTED = 6
+        CARDCHARLIEWINSET = CARDCHARLIEWINSET + 1
+        IF CARDCHARLIEWINSET >=7 THEN CARDCHARLIEWINSET = 5
+    ELIF SELECTED = 7
+         SPLITSET = SPLITSET + 1
+         IF SPLITSET>=3 THEN SPLITSET = 0
+    ELIF SELECTED = 8
+       IF ALLOWSURRENDER = 0
+          ALLOWSURRENDER = 1
+       ELSE
+          ALLOWSURRENDER = 0
+       ENDIF      
+    ELIF SELECTED = 9
+        IF BONUS777 = 0
+            BONUS777 = 1
+        ELSE
+            BONUS777 = 0
+        ENDIF
+    ELIF SELECTED = 10
+       IF BONUS678 = 0
+          BONUS678 = 1
+       ELSE
+          BONUS678 = 0
+       ENDIF    
+    ELIF SELECTED = 11
+      LASTPLAYER = LASTPLAYER + 1
+      IF LASTPLAYER >=4 THEN LASTPLAYER = 1    
+    ENDIF    
+      
+
+
+ENDPROC
+
+
+
+     
+    
+
+  
+
+
+
