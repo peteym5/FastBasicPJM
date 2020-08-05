@@ -478,7 +478,7 @@ PROC PERFORM_DEAL
                      ENDIF
                        
                      ' *** Temporary Override for checking                   
-                     PLAYERNSPLIT(PLAYERNO) = 1
+                     '  PLAYERNSPLIT(PLAYERNO) = 1
 
 
 
@@ -1019,14 +1019,21 @@ PROC PERFORM_REWARDS
                  ENDIF
             ELIF HANDTOTAL >= 22 
                   IF HANDNUMBER = 0 OR LASTPLAYER <=2
-                        PLAYERNMESSAGE$(PLAYERNO) = STR$(HANDTOTAL) 
-                        PLAYERNMESSAGE$(PLAYERNO) =+" BUSTED  LOST:" 
-                        PLAYERNMESSAGE$(PLAYERNO) =+ STR$(PLAYERNBET%(PLAYERNO))
+                        PLAYERNMESSAGE$(PLAYERNO) = STR$(HANDTOTAL)
+                        TEMPMESSAGE$ = STR$(PLAYERNBET%(PLAYERNO)) 
+                        IF LEN(TEMPMESSAGE$) <= 2 
+                          PLAYERNMESSAGE$(PLAYERNO) =+" BUSTED  LOST:"
+                        ELIF LEN(TEMPMESSAGE$) = 3
+                          PLAYERNMESSAGE$(PLAYERNO) =+" BUSTED LOST:"
+                        ELSE
+                          PLAYERNMESSAGE$(PLAYERNO) =+" BUST LOST:"
+                        ENDIF 
+                        PLAYERNMESSAGE$(PLAYERNO) =+ TEMPMESSAGE$
                   ENDIF 
                   HANDREWARD%(HANDNUMBER) =- PLAYERNBET%(PLAYERNO) 
             ELIF PLAYERNDRAWN(PLAYERNO) <= -1 
                   IF HANDNUMBER = 0 OR LASTPLAYER <=2 
-                        PLAYERNMESSAGE$(PLAYERNO) = "SURRENDERED  LOST:" 
+                        PLAYERNMESSAGE$(PLAYERNO) = "SURRENDERED LOST:" 
                         PLAYERNMESSAGE$(PLAYERNO) =+ STR$(INT(PLAYERNBET%(PLAYERNO)/2))
                   ENDIF
                   HANDREWARD%(HANDNUMBER) = - INT(PLAYERNBET%(PLAYERNO) / 2)
@@ -1060,7 +1067,7 @@ PROC PERFORM_REWARDS
                             IF HANDNUMBER = 0 OR LASTPLAYER <=2  
                                 PLAYERNMESSAGE$(PLAYERNO) = "TIE:" 
                                 PLAYERNMESSAGE$(PLAYERNO) =+ STR$(HANDTOTAL) 
-                                PLAYERNMESSAGE$(PLAYERNO) =+ " LOST:" 
+                                PLAYERNMESSAGE$(PLAYERNO) =+ "  LOST:" 
                                 PLAYERNMESSAGE$(PLAYERNO) =+ STR$(PLAYERNBET%(PLAYERNO))
                             ENDIF
                             HANDREWARD%(HANDNUMBER) =- PLAYERNBET%(PLAYERNO) 
@@ -1075,7 +1082,7 @@ PROC PERFORM_REWARDS
                         IF HANDNUMBER = 0 OR LASTPLAYER <=2  
                             PLAYERNMESSAGE$(PLAYERNO) = "TOTAL:" 
                             PLAYERNMESSAGE$(PLAYERNO) =+ STR$(HANDTOTAL) 
-                            PLAYERNMESSAGE$(PLAYERNO) =+ " LOST:" 
+                            PLAYERNMESSAGE$(PLAYERNO) =+ "  LOST:" 
                             PLAYERNMESSAGE$(PLAYERNO) =+ STR$(PLAYERNBET%(PLAYERNO))
                         ENDIF
                         HANDREWARD%(HANDNUMBER) =- PLAYERNBET%(PLAYERNO) 
@@ -1434,9 +1441,11 @@ PROC SHOWSTATS
               PLAYERNMESSAGE$(DisplayBetPlayerNumber) =+ "                          "
               PLAYERNMESSAGE$(DisplayBetPlayerNumber) = PLAYERNMESSAGE$(DisplayBetPlayerNumber)[1,24]
               POSITION 0,4:PRINT "                   "
-              POSITION 0,4:PRINT PLAYERNCASH%(DisplayBetPlayerNumber)
-              POSITION 9,4:PRINT PLAYERNBET%(DisplayBetPlayerNumber)
-              POSITION 14,4              
+              POSITION 0,4:PRINT "$"
+              POSITION 1,4:PRINT PLAYERNCASH%(DisplayBetPlayerNumber)
+              POSITION 8,4:PRINT "B:"
+              POSITION 10,4:PRINT PLAYERNBET%(DisplayBetPlayerNumber)
+              POSITION 15,4              
               PRINT PLAYERNMESSAGE$(DisplayBetPlayerNumber)
             ENDIF 
         ENDIF
