@@ -170,7 +170,7 @@ X=0
 Y=0
 Z=0
 GAME_COMMAND$ = ""
-END_PROGRAM = FALSE
+END_PROGRAM = FALSE 'Program will loop until END_PROGRAM is non zero, and return to title screen. 
 
 REPEAT
     EXEC INIT_DEFAULTS
@@ -243,6 +243,9 @@ UNTIL END_PROGRAM = TRUE
 END
 
 PROC INIT_GAME
+        'Initialize Game Variables to Default Values
+        'Set Game Colors and set Player / Missile Registers. 
+
         DECK = 0        
         CARDPLACE = 0
         IMAGEGET = 0
@@ -1204,8 +1207,6 @@ PROC PERFORM_SPLITDEAL
             EXEC SET_PLAYER_SCREEN_SECTION
             EXEC PERFORM_HIT
             EXEC CALCTOTAL           
-'            PLAYERBJCARDVAL(PLAYERNO*20+8) = BJCARDVALUE(CARDORDER(CARDNO))
-'            PLAYERSUCARDVAL(PLAYERNO*20+8) = CARDSUITVALUE(CARDORDER(CARDNO))                        
             PLAYERNSPLIT(PLAYERNO) = 2
             
             TEMPMESSAGE$ = " 0:"
@@ -1374,8 +1375,6 @@ PROC GETBETS
                 POSITION 22,4
                 PRINT ERRORMESSAGE$
             ENDIF                        
-            ' ****  TEXT DISPPLAYERLEFT+62+DISPPLAYERSPACING*(GetBetPlayerNumber-1),DISPPLAYERTOP + DISPPLAYERVERTICAL * 8, ENTRY$(1)
-            ' ****  TEXT DISPPLAYERLEFT+12+DISPPLAYERSPACING*(GetBetPlayerNumber-1),DISPPLAYERTOP + DISPPLAYERVERTICAL * 8, "BET"            
         UNTIL BETOK = 1 OR EXITGAME = 1
     NEXT GetBetPlayerNumber
 ENDPROC
@@ -1389,8 +1388,6 @@ PROC SHOWSTATS
             DPOKE 88,@SCREEN_ADDR
             POSITION 0,4
             PRINT "Dealer"
-            ' ****   CENTER TEXT DISPDEALERLEFT, 16,  "DEALER"
-            ' ****   CENTER TEXT DISPDEALERLEFT, 17 + DISPPLAYERVERTICAL, PLAYERNMESSAGE$(DisplayBetPlayerNumber)                        
             PLAYERNMESSAGE$(DisplayBetPlayerNumber) =+ "                   "
             PLAYERNMESSAGE$(DisplayBetPlayerNumber) = PLAYERNMESSAGE$(DisplayBetPlayerNumber)[1,18]
             POSITION 21,4
@@ -1869,9 +1866,9 @@ ENDPROC
 PROC Change_Game_Option
     SELECTED=PEEK(@DLIV1)
     IF SELECTED = 0 
-        'Deck size can be 48 or 52 cards
+        'Deck size can be 48 or 52 cards. 56 Card Deck Disabled.
         DECKSIZE = DECKSIZE + 4
-        IF DECKSIZE >=60 THEN DECKSIZE = 48      
+        IF DECKSIZE >=56 THEN DECKSIZE = 48      
     ELIF SELECTED = 1
         'Number of Decks can 4,6,or 8 Decks
         NUMBER_OF_DECKS = NUMBER_OF_DECKS + 2
